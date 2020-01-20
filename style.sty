@@ -1,0 +1,248 @@
+%%%%% PACKAGES
+
+% better microtypography
+\usepackage{microtype}
+
+% better macros
+\usepackage{xparse}
+
+% bibliography
+\usepackage[backend=biber, style=alphabetic, dateabbrev=false, urldate=long]{biblatex}
+
+% better list configuration
+\usepackage{enumitem}
+
+% automatic quotation marks
+\usepackage{csquotes}
+
+% tables
+\usepackage{booktabs}
+
+% general mathtools
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm} % configuration after cleveref was included
+
+% pictures and diagrams
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, shapes.geometric, decorations.text}
+\usepackage{arrowstyle}
+
+% setting fonts
+\usepackage[silent]{fontspec}
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math} % has to be loaded after mathtools and amssymb
+
+% header
+%\usepackage[automark, autooneside=false]{scrlayer-scrpage}
+
+% referencing
+\usepackage[noabbrev, capitalize]{cleveref}
+
+
+
+
+%%%%% CONFIGURATION
+
+
+%%% header and footer
+%\automark[section]{section}
+%\automark*[subsection]{}
+
+%\lehead{\pagemark}
+%\rohead{\pagemark}
+
+%\cehead{\rightmark}
+%\cohead{\rightmark}
+
+%\ofoot{}
+%\cfoot{}
+%\ifoot{}
+
+
+%%% bibliography
+
+% file for the bibliography,
+\bibliography{references.bib}
+
+% always insert pp. after pagetotal, even if it isn’t recognized as a number by biblatex
+\DeclareFieldFormat[book]{pagetotal}{#1~\ppno}
+
+% no unplaned surprises with \cite
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+
+%%% lists
+
+% enumerate
+\setlist[enumerate]   { wide          = 0pt,
+                        leftmargin    = *,
+                        listparindent = \parindent,
+                        parsep        = 0pt }
+\setlist[enumerate, 1]{ label         = \arabic*. }
+\setlist[enumerate, 2]{ label         = \alph*. }
+
+% itemize
+\setlist[itemize]    { wide          = 0pt,
+                       leftmargin    = *,
+                       listparindent = \parindent,
+                       parsep        = 0pt }
+\setlist[itemize, 1]{ label          = {\textbullet} }
+\setlist[itemize, 2]{ label          = {\textopenbullet} }
+
+
+%%% fonts
+
+\setmainfont[RawFeature=+calt]{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmonofont{Libertinus Sans}
+\setmathfont{Libertinus Math}
+\setmathfont[range=\mathfrak,Scale=MatchUppercase]{Latin Modern Math}
+\setmathfont[range={}]{Libertinus Math}
+
+\newfontfamily{\headingfont}{Libertinus Serif}[RawFeature = {+ss05, +ss06, +calt}]
+\addtokomafont{disposition}{\headingfont}
+
+
+
+%%% spacing
+
+% prevents breaking inline math around binary or relationship symbols
+\binoppenalty = \maxdimen
+\relpenalty   = \maxdimen
+
+% for fixing spacing by hand
+\newcommand{\spacing}{\,}
+\newcommand{\nspacing}{\!}
+
+
+
+%%% text formatting
+\newcommand{\defemph}{\emph}
+
+% words
+\newcommand{\adic}[1]{#1\nobreakdash-adic}
+\newcommand{\algebra}[1]{#1\nobreakdash-algebra}
+\newcommand{\algebras}[1]{#1\nobreakdash-algebras}
+\newcommand{\bilinear}[1]{#1\nobreakdash\hspace{0pt}-bilinear}
+\newcommand{\bilinearity}[1]{#1\nobreakdash\hspace{0pt}-bilinearity}
+\newcommand{\coalgebra}[1]{#1\nobreakdash-coalgebra}
+\newcommand{\howmanyth}[1]{#1\nobreakdash-th}
+\newcommand{\linear}[1]{#1\nobreakdash-linear}
+\newcommand{\module}[1]{#1\nobreakdash-module}
+\newcommand{\modules}[1]{#1\nobreakdash-modules}
+\newcommand{\PBWbasis}{PBW\nobreakdash-basis}
+\newcommand{\vectorspace}[1]{#1\nobreakdash-vector space}
+\newcommand{\vectorspaces}[1]{#1\nobreakdash-vector spaces}
+
+
+
+%%% math stuff
+
+% theorem environments
+\newcounter{everything}[section]
+\theoremstyle{definition}
+\newtheorem{convention}[everything]{Convention}
+\newtheorem{corollary}[everything]{Corollary}
+\newtheorem{definition}[everything]{Definition}
+\newtheorem{example}[everything]{Example}
+\newtheorem{lemma}[everything]{Lemma}
+\newtheorem{motivation}[everything]{Motivation}
+\newtheorem{proposition}[everything]{Proposition}
+\newtheorem{remark}[everything]{Remark}
+\newtheorem{theorem}[everything]{Theorem}
+\newtheorem{warning}[everything]{Warning}
+
+\renewcommand{\theeverything}{\thesection.\arabic{everything}}
+
+% fields and numbers
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\kf}{\mathbb{k}}
+
+% categories
+\newcommand{\catname}{\mathbf}
+\newcommand{\gencatname}{\mathcal}
+% generaic categories
+% specific categories
+\newcommand{\cMod}[1]{#1\textrm{-}\catname{Mod}^{\mathrm{comp}}}
+\newcommand{\Mod}[1]{#1\textrm{-}\catname{Mod}}
+
+% arrows
+\newcommand{\longto}{\longrightarrow}
+\newcommand{\xto}{\xrightarrow}
+\newcommand{\xlongto}[1]{\xrightarrow{\; #1 \;}}
+
+% Lie algebras
+\newcommand{\blie}{\mathfrak{b}}
+\newcommand{\glie}{\mathfrak{g}}
+\newcommand{\sllie}{\mathfrak{sl}}
+
+% elements
+\newcommand{\CHoch}{\smash{\mathrm{C}}\vphantom{C}_{\mathrm{Hoch}}}
+\newcommand{\e}{\mathrm{e}}
+
+% spaces and such
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\HH}{HH}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Homology}{H}
+\DeclareMathOperator{\irred}{L}
+\newcommand{\kfhbar}{\power{\kf}{\hbar}}
+\DeclareMathOperator{\Mat}{M}
+\DeclareMathOperator{\openball}{B}
+\newcommand{\power}[2]{#1 \lBrack #2 \rBrack }
+\DeclareMathOperator{\Univ}{U}
+\DeclareMathOperator{\verma}{M}
+
+% functions
+\newcommand{\dhbar}{\mathrm{d}_{\hbar}}
+\newcommand{\id}{\mathrm{id}}
+\DeclareMathOperator{\tr}{tr}
+
+% binary relations and operations
+\newcommand{\ctensor}{\mathbin{\widehat{\otimes}}}
+\newcommand{\defined}{\coloneqq}
+\newcommand{\defines}{\eqqcolon}
+\newcommand{\tensor}{\otimes}
+
+% others
+\newcommand{\pMod}[1]{\ (\mathrm{mod}\ #1)}
+
+% delimiters
+\DeclarePairedDelimiter{\gen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\genideal}{(}{)}
+\DeclareRobustCommand{\qbinom}{\genfrac{[}{]}{0pt}{}}
+\DeclarePairedDelimiterXPP{\qnum}[1]{}{[}{]}{_q}{#1}
+
+% decoration
+\newcommand{\class}{\overline}
+\AtBeginDocument{\renewcommand{\closure}{\overline}}
+\newcommand{\induced}{\overline}
+
+% suchthat
+\NewDocumentCommand%
+{\suchthat}%
+{so}
+{%
+  \IfValueTF{#2}
+  {%
+    \:#2\vert\:
+  }
+  {%
+    \IfBooleanTF{#1}
+    {%
+      \:\middle\vert\:
+    }
+    {%
+      \mathrel{\vert}
+    }
+  }
+}
+
+
+
+
+
