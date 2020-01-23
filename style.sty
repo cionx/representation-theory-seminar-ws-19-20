@@ -124,14 +124,19 @@
 \newcommand{\adic}[1]{#1\nobreakdash-adic}
 \newcommand{\algebra}[1]{#1\nobreakdash-algebra}
 \newcommand{\algebras}[1]{#1\nobreakdash-algebras}
-\newcommand{\bilinear}[1]{#1\nobreakdash\hspace{0pt}-bilinear}
-\newcommand{\bilinearity}[1]{#1\nobreakdash\hspace{0pt}-bilinearity}
+\newcommand{\bilinear}[1]{#1\nobreakdash-\hspace{0pt}bilinear}
+\newcommand{\bilinearity}[1]{#1\nobreakdash-\hspace{0pt}bilinearity}
 \newcommand{\coalgebra}[1]{#1\nobreakdash-coalgebra}
 \newcommand{\howmanyth}[1]{#1\nobreakdash-th}
 \newcommand{\linear}[1]{#1\nobreakdash-linear}
 \newcommand{\module}[1]{#1\nobreakdash-module}
 \newcommand{\modules}[1]{#1\nobreakdash-modules}
 \newcommand{\PBWbasis}{PBW\nobreakdash-basis}
+\newcommand{\representation}[1]{#1\nobreakdash-\hspace{0pt}representation}
+\newcommand{\representations}[1]{#1\nobreakdash-\hspace{0pt}representations}
+\newcommand{\submodule}[1]{#1\nobreakdash-\hspace{0pt}submodule}
+\newcommand{\submodules}[1]{#1\nobreakdash-\hspace{0pt}submodules}
+\newcommand{\subrepresentation}[1]{#1\nobreakdash-\hspace{0pt}subrepresentation}
 \newcommand{\vectorspace}[1]{#1\nobreakdash-vector space}
 \newcommand{\vectorspaces}[1]{#1\nobreakdash-vector spaces}
 
@@ -161,6 +166,7 @@
 \newcommand{\Rational}{\mathbb{Q}}
 \newcommand{\Complex}{\mathbb{C}}
 \newcommand{\kf}{\mathbb{k}}
+\newcommand{\Kf}{\mathbb{K}}
 
 % categories
 \newcommand{\catname}{\mathbf}
@@ -215,7 +221,19 @@
 \DeclarePairedDelimiter{\gen}{\langle}{\rangle}
 \DeclarePairedDelimiter{\genideal}{(}{)}
 \DeclareRobustCommand{\qbinom}{\genfrac{[}{]}{0pt}{}}
-\DeclarePairedDelimiterXPP{\qnum}[1]{}{[}{]}{_q}{#1}
+\DeclarePairedDelimiterXPP{\preqnum}[2]{}{[}{]}{_{#2}}{#1}
+\NewDocumentCommand
+  {\qnum}
+  {m o}
+  {
+    \IfValueTF{#2}
+    {
+      \preqnum{#1}{#2}
+    }
+    {
+      \preqnum{#1}{q}
+    }
+  }
 
 % decoration
 \newcommand{\class}{\overline}
