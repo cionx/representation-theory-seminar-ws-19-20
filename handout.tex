@@ -984,7 +984,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     \item
       The above definition is actually wrong.
       Instead of simply Hopf algebras over~$\kfhbar$ one needs to consider \defemph{topological Hopf algebras}.
-      This means that one has to replace the tensor product
+      This means that for the comultiplication of~$A_\hbar$ one has to replace the tensor product
       \[
         A_\hbar \tensor_{\kfhbar} A_\hbar
       \]
@@ -998,14 +998,16 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         =
         \power{A}{\hbar} \ctensor \power{A}{\hbar}
         \cong
-        \power{(A \tensor A)}{\hbar} \,.
+        \power{(A \tensor A)}{\hbar}
       \]
+      as~\modules{$\kfhbar$}.
+      This means that we must allow the comultiplication to take as values not only tensors, but actually power series of tensors.
     \item
       If~$A_{\hbar}$ is a deformation of~$A$ then the multiplication
       \[
         m_{\hbar}
         \colon
-        A_\hbar \ctensor A_\hbar
+        A_\hbar \times A_\hbar
         \to
         A_\hbar
       \]
@@ -1018,18 +1020,31 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         A_\hbar \ctensor A_\hbar
       \]
       are uniquely determined by the values
+      \[
+        \mu_{\hbar}(a,b) \,,
+        \quad
+        \Delta_{\hbar}(a)
+        \qquad
+        \text{with~$a, b \in A$.}
+      \]
+      These values are of the form
       \begin{align*}
         \mu_{\hbar}(a,b)
         &=
         \mu_0(a,b) + \mu_1(a,b) \hbar + \mu_2(a,b) \hbar^2 + \dotsb \,,
         \\
-        \Delta_{\hbar}(a,b)
+        \Delta_{\hbar}(a)
         &=
-        \Delta_0(a,b) + \Delta_1(a,b) \hbar + \Delta_2(a,b) \hbar^2 + \dotsb
+        \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
       \end{align*}
-      for~$a, b \in A$.
-      It follows from the identity of Hopf algebras~$A_\hbar / \hbar A_\hbar = A$ that~$\mu_0$ needs to be the multiplication of~$A$ and~$\Delta_0$ the multiplication of~$A$.
-      The Hopf algebra structure of~$A_\hbar$ is in this sense a \enquote{perturbation} of the one of~$A$.
+      for certain (bi)linear map
+      \[
+        \mu_i \colon A \times A \to A \,,
+        \quad
+        \Delta_i \colon A \to A \tensor A \,.
+      \]
+      It follows from the identity of Hopf algebras~$A_\hbar / \hbar A_\hbar = A$ that~$\mu_0$ needs to be the multiplication of~$A$ and~$\Delta_0$ the comultiplication of~$A$.
+      The Hopf algebra structure of~$A_\hbar$, is in this sense, a \enquote{perturbation} of the one of~$A$.
   \end{enumerate}
 \end{remark}
 
@@ -1079,7 +1094,14 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         K \defined \e^{\hbar H} \,.
       \]
       The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
+      We would thus like to regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
+
+      This is possible by extension of scalars:
       We consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
+      \[
+        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
+      \]
+      which is given as an~\module{$\lpower{\kf}{\hbar}$} by
       \[
         \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
         =
@@ -1100,10 +1122,12 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
       \[
         \widetilde{H}
-        =
+        \defined
         [E,F]
         =
-        \frac{K - K^{-1}}{q - q^{-1}} \,,
+        \frac{K - K^{-1}}{q - q^{-1}}
+        =
+        \frac{\e^{\hbar H} - \e^{-\hbar H}}{\e^{\hbar} - \e^{-\hbar}}
       \]
       which is of the form
       \[
@@ -1126,17 +1150,62 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{remark}
 
 \begin{theorem}[{\cite[Proposition~6.4.10]{guide_to_quantum_groups}}]
-  For every natural number~$n \in \Natural$ let~$V(n)$ be the free~\module{$\kfhbar$} of rank~$n+1$ with basis~$v_0, \dotsc, v_n$.
+  For every natural number~$n \in \Natural$ let~$L(n)$ be the free~\module{$\kfhbar$} of rank~$n+1$ with basis~$w_0, \dotsc, w_n$.
   \begin{enumerate}
     \item
       There exists a unique~\module{$\Univ_{\hbar}(\sllie_2)$} structure on~$V(n)$ such that
       \[
-        H v_i \defined (n - 2i) v_i \,,
+        H w_i \defined (n - 2i) w_i \,,
         \quad
-        E v_i \defined \qnum{n - i + 1} v_{i-1} \,,
+        E w_i \defined \qnum{n - i + 1} w_{i-1} \,,
         \quad
-        F v_i \defined \qnum{i+1} v_{i+1} \,.
+        F w_i \defined \qnum{i+1} w_{i+1} \,.
       \]
+      The actions of~$E$,~$H$,~$F$ can be graphically depicted as in \cref{graphical representation of deformed representations}. 
+      \begin{figure}
+        \begin{center}
+          \begin{tikzpicture}[
+              yscale = 1.2,
+              bendy/.style = {bend right = 25},
+              loopy/.style = {out = 190, in = 170, looseness = 40}
+            ]
+            % nodes
+            \node (w0)   at (0,  0) {$w_0$};
+            \node (w1)   at (0, -1) {$w_1$};
+            \node (w2)   at (0, -2) {$w_2$};
+            \node (rest) at (0, -3) {$\vdots$};
+            \node (wn-2) at (0, -4) {$w_{n-2}$};
+            \node (wn-1) at (0, -5) {$w_{n-1}$};
+            \node (wn)   at (0, -6) {$w_n$};
+            % the action of h
+            \draw[->] (w0)    to[loopy] node[left]{$\scriptstyle n$} (w0);
+            \draw[->] (w1)    to[loopy] node[left]{$\scriptstyle n-2$} (w1);
+            \draw[->] (w2)    to[loopy] node[left]{$\scriptstyle n-4$} (w2);
+            \draw[->] (wn-2)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle -n+4$} (wn-2);
+            \draw[->] (wn-1)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle -n+2$} (wn-1);
+            \draw[->] (wn)    to[loopy] node[left]{$\scriptstyle -n$} (wn);
+            % the action of f
+            \draw[->, densely dotted] (w0)    to[bendy] node[left] {$\scriptstyle \qnum{1}$} (w1);
+            \draw[->, densely dotted] (w1)    to[bendy] node[left] {$\scriptstyle \qnum{2}$} (w2);
+            \draw[->, densely dotted] (w2)    to[bendy] (rest);
+            \draw[->, densely dotted] (rest)  to[bendy] (wn-2);
+            \draw[->, densely dotted] (wn-2)  to[bendy] node[left] {$\scriptstyle \qnum{n-1}$} (wn-1);
+            \draw[->, densely dotted] (wn-1)  to[bendy] node[left] {$\scriptstyle \qnum{n}$} (wn);
+            % the action of e
+            \draw[->, densely dashed] (w1)    to[bendy] node[right] {$\scriptstyle \qnum{n}$} (w0);
+            \draw[->, densely dashed] (w2)    to[bendy] node[right] {$\scriptstyle \qnum{n-1}$} (w1);
+            \draw[->, densely dashed] (rest)  to[bendy] (w2);
+            \draw[->, densely dashed] (wn-2)  to[bendy] (rest);
+            \draw[->, densely dashed] (wn-1)  to[bendy] node[right] {$\scriptstyle \qnum{2}$} (wn-2);
+            \draw[->, densely dashed] (wn)    to[bendy] node[right] {$\scriptstyle \qnum{1}$} (wn-1);
+          \end{tikzpicture}
+        \end{center}
+        \caption{%
+          The irreducible representation~$\irred(n)$ of~$\Univ(\sllie_2)$.
+          Loops depict the action of~$H$, dashed arrows the action of~$E$ and dotted arrows the action of~$F$.
+        }
+        \label{graphical representation of deformed representations}
+      \end{figure}
     \item
       The~\modules{$\Univ_{\hbar}(\sllie_2)$}~$V(n)$ is indecomposable.
     \item
@@ -1156,7 +1225,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       \[
         \irred(q^n)
         \cong
-        \gen{v_0, \dotsc, v_n}_{\kf(q)}
+        \gen{1 \tensor v_0, \dotsc, 1 \tensor v_n}_{\kf(q)}
         \subseteq
         \lpower{\kf}{\hbar} \tensor_{\kfhbar} V(n)
       \]
@@ -2974,7 +3043,7 @@ The following is taken mostly from \cite[Chapter~6]{guide_to_quantum_groups}.
     \item
       A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e.~$\power{A}{\hbar}$).
     \item
-      A Hopf algebra deformation of the universal enveloping algebra~$\Univ(\glie)$ of a Lie~algebra~$\glie$ is a \defemph{quantum universal enveloping algebra (QUE)}.
+      A Hopf algebra deformation of the universal enveloping algebra~$\Univ(\glie)$ of a Lie~algebra~$\glie$ is a \defemph{quantum universal enveloping algebra}.
   \end{enumerate}
 \end{definition}
 
