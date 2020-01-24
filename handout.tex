@@ -18,7 +18,7 @@
 
 
 
-\section{Recalling the Representation Theory of~$\sllie_2$}
+\section{Recalling~$\sllie_2$-Theory}
 
 Let~$\kf$ be a field.
 The Lie algebra
@@ -479,11 +479,11 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     \defined
     \qnum{n} \qnum{n-1} \dotsm \qnum{1} \,.
   \]
-  For every invertible element~$u \in \Univ_q(\sllie_2)$ and integer~$n \in \Integer$ let
+  For every invertible element~$x \in \Univ_q(\sllie_2)$ and integer~$n \in \Integer$ let
   \[
-    \qnum{u, n}
+    \qnum{x, n}
     \defined
-    \frac{ q^n u - q^{-n} u^{-1} }{ q - q^{-1} } \,.
+    \frac{ q^n x - q^{-n} x^{-1} }{ q - q^{-1} } \,.
   \]
 \end{definition}
 
@@ -538,9 +538,9 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
             \draw[->, densely dashed] (rest) to[bendy] (m3);
             % the action of h
             \draw[->] (m0) to[loopy] node[left]{$\scriptstyle \lambda$} (m0);
-            \draw[->] (m1) to[loopy] node[left]{$\scriptstyle q^{-2} \lambda$} (m1);
-            \draw[->] (m2) to[loopy] node[left]{$\scriptstyle q^{-4} \lambda$} (m2);
-            \draw[->] (m3) to[loopy] node[left]{$\scriptstyle q^{-6} \lambda$} (m3);
+            \draw[->] (m1) to[loopy] node[left]{$\scriptstyle \lambda q^{-2}$} (m1);
+            \draw[->] (m2) to[loopy] node[left]{$\scriptstyle \lambda q^{-4}$} (m2);
+            \draw[->] (m3) to[loopy] node[left]{$\scriptstyle \lambda q^{-6}$} (m3);
           \end{tikzpicture}
           \hspace{4em}
           \begin{tikzpicture}[
@@ -672,7 +672,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
   \leavevmode
   \begin{enumerate}
     \item
-      For every~$n \geq 0$ we have
+      For every~$n \in \Integer$ we have
       \[
         \qnum{\pm q^n, -i+1}
         =
@@ -682,7 +682,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       \[
         w_i
         \defined
-        \frac{v_i}{\qnum{i}!}
+        \frac{m_i}{\qnum{i}!}
       \]
       the actions of~$E$,~$F$ thus become
       \[
@@ -766,7 +766,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
           \end{tikzpicture}
         \end{center}
         \caption{
-          The irreducible representation~$\irred(\pm q^n)$.
+          The irreducible representation~$\irred(\pm q^n)$ of~$\Univ_q(\sllie_2)$.
           On the left side the loops depict the action of~$K$, an on the right side they depict the action of~$\widetilde{H}$.
           On both sides the action of~$F$ is depicted by dotted arrows and the action of~$E$ by dashed arrows.
         }
@@ -780,7 +780,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         \frac{K - K^{-1}}{q - q^{-1}}
       \]
       of~$\Univ_q(\sllie_2)$.
-      It acts on the weight space~$M_{q^{-2i} \lambda}$ by the scalar~$\qnum{\lambda, -2i}$.
+      It acts on the weight space~$M_{\lambda q^{-2i}}$ by the scalar~$\qnum{\lambda, -2i}$.
       For~$\lambda = \pm q^n$ this means
       \[
         \qnum{\lambda, -2i}
@@ -855,33 +855,33 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{proof}
 
 \begin{definition}
-  The Hopf algebra structure is given as in \cref{hopf algebra structure on quantum sl2}.
+  The Hopf algebra structure of~$\Univ_q(\sllie_2)$ is given as in \cref{hopf algebra structure on quantum sl2}.
 \end{definition}
 
 \begin{remark}
-  \leavevmode
-  \begin{enumerate}
-    \item
+%  \leavevmode
+%  \begin{enumerate}
+%    \item
       The Hopf algebra~$\Univ_q(\sllie_2)$ is neither commutative nor cocommutative.
       It is an example of a so-called \defemph{quantum group}.
-    \item
-      In~$\Univ_q(\sllie_2)$ we don’t have~$S^2 = \id$ but instead
-      \[
-        S^2(x) = K^{-1} x K
-      \]
-      for every element~$x \in \Univ_q(\sllie_2)$, as can be checked on the elements~$E$,~$K$,~$F$.
-      It entails in particular that
-      \[
-        S^2(E)
-        =
-        K^{-1} E K
-        =
-        q^2 K^{-1} K E
-        =
-        q^2 E \,,
-      \]
-      which shows that~$S$ has infinite order.
-  \end{enumerate}
+%    \item
+%      In~$\Univ_q(\sllie_2)$ we don’t have~$S^2 = \id$ but instead
+%      \[
+%        S^2(x) = K^{-1} x K
+%      \]
+%      for every element~$x \in \Univ_q(\sllie_2)$, as can be checked on the elements~$E$,~$K$,~$F$.
+%      It entails in particular that
+%      \[
+%        S^2(E)
+%        =
+%        K^{-1} E K
+%        =
+%        q^2 K^{-1} K E
+%        =
+%        q^2 E \,,
+%      \]
+%      which shows that~$S$ has infinite order.
+%  \end{enumerate}
 \end{remark}
 
 \begin{lemma}
@@ -901,30 +901,13 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{proof}
 
 \begin{corollary}
-  \leavevmode
-  \begin{enumerate}
-    \item
-      Let~$M$,~$N$ be two finite-dimensional~\modules{$\Univ_q(\sllie_2)$}.
-      Then
-      \[
-        M \tensor N
-        \cong
-        N \tensor M \,.
-      \]
-    \item
-      For all~$\delta, \varepsilon \in \{1, -1\}$ and~$n, m \in \Natural$ with~$n \geq m$ we have
-      \[
-        \irred(\delta q^n) \tensor \irred(\varepsilon q^m)
-        \cong
-        \irred(\delta \varepsilon q^{n+m})
-        \oplus
-        \irred(\delta \varepsilon q^{n+m-2})
-        \oplus
-        \dotsb
-        \oplus
-        \irred(\delta \varepsilon q^{n-m}) \,.
-      \]
-  \end{enumerate}
+  Let~$M$,~$N$ be two finite-dimensional~\modules{$\Univ_q(\sllie_2)$}.
+  Then
+  \[
+    M \tensor N
+    \cong
+    N \tensor M \,.
+  \]
 \end{corollary}
 
 \begin{proof}
@@ -945,16 +928,10 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     n \tensor m
   \]
   is in general not~\linear{$\Univ_q(\sllie_2)$}.
-  Indeed, let us consider~$M = N = \irred(q)$ with basis~$m_0$,~$m_1$, so that
-  \[
-    K^{-1} m_0 = q^{-1} m_0 \,,
-    \quad
-    K^{-1} m_1 = q m_1 \,,
-    \quad
-    F m_0 = m_1 \,,
-    \quad
-    F m_1 = 0 \,.
-  \]
+\end{warning}
+
+\begin{example}
+  Indeed, let us consider~$M = N = \irred(q)$ with basis~$m_0$,~$m_1$.
   Then
   \[
     F \cdot (m_0 \tensor m_1)
@@ -965,9 +942,9 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     =
     F \cdot (m_1 \tensor m_0) \,.
   \]
-\end{warning}
+\end{example}
 
-
+There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum clebsch gordan}.
 
 
 
@@ -979,9 +956,9 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{definition}
 
 \begin{remark}
-  Let~$A$ be a Hopf algebra over~$\kf$.
-  \begin{enumerate}
-    \item
+%  Let~$A$ be a Hopf algebra over~$\kf$.
+%  \begin{enumerate}
+%    \item
       The above definition is actually wrong.
       Instead of simply Hopf algebras over~$\kfhbar$ one needs to consider \defemph{topological Hopf algebras}.
       This means that for the comultiplication of~$A_\hbar$ one has to replace the tensor product
@@ -1002,54 +979,58 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       \]
       as~\modules{$\kfhbar$}.
       This means that we must allow the comultiplication to take as values not only tensors, but actually power series of tensors.
-    \item
-      If~$A_{\hbar}$ is a deformation of~$A$ then the multiplication
-      \[
-        m_{\hbar}
-        \colon
-        A_\hbar \times A_\hbar
-        \to
-        A_\hbar
-      \]
-      and the comultiplication
-      \[
-        \Delta_{\hbar}
-        \colon
-        A
-        \to
-        A_\hbar \ctensor A_\hbar
-      \]
-      are uniquely determined by the values
-      \[
-        \mu_{\hbar}(a,b) \,,
-        \quad
-        \Delta_{\hbar}(a)
-        \qquad
-        \text{with~$a, b \in A$.}
-      \]
-      These values are of the form
-      \begin{align*}
-        \mu_{\hbar}(a,b)
-        &=
-        \mu_0(a,b) + \mu_1(a,b) \hbar + \mu_2(a,b) \hbar^2 + \dotsb \,,
-        \\
-        \Delta_{\hbar}(a)
-        &=
-        \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
-      \end{align*}
-      for certain (bi)linear map
-      \[
-        \mu_i \colon A \times A \to A \,,
-        \quad
-        \Delta_i \colon A \to A \tensor A \,.
-      \]
-      It follows from the identity of Hopf algebras~$A_\hbar / \hbar A_\hbar = A$ that~$\mu_0$ needs to be the multiplication of~$A$ and~$\Delta_0$ the comultiplication of~$A$.
-      The Hopf algebra structure of~$A_\hbar$, is in this sense, a \enquote{perturbation} of the one of~$A$.
-  \end{enumerate}
+%    \item
+%      If~$A_{\hbar}$ is a deformation of~$A$ then the multiplication
+%      \[
+%        m_{\hbar}
+%        \colon
+%        A_\hbar \times A_\hbar
+%        \to
+%        A_\hbar
+%      \]
+%      and the comultiplication
+%      \[
+%        \Delta_{\hbar}
+%        \colon
+%        A
+%        \to
+%        A_\hbar \ctensor A_\hbar
+%      \]
+%      are uniquely determined by the values
+%      \[
+%        \mu_{\hbar}(a,b) \,,
+%        \quad
+%        \Delta_{\hbar}(a)
+%        \qquad
+%        \text{with~$a, b \in A$.}
+%      \]
+%      These values are of the form
+%      \begin{align*}
+%        \mu_{\hbar}(a,b)
+%        &=
+%        \mu_0(a,b) + \mu_1(a,b) \hbar + \mu_2(a,b) \hbar^2 + \dotsb \,,
+%        \\
+%        \Delta_{\hbar}(a)
+%        &=
+%        \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
+%      \end{align*}
+%      for certain (bi)linear map
+%      \[
+%        \mu_i \colon A \times A \to A \,,
+%        \quad
+%        \Delta_i \colon A \to A \tensor A \,.
+%      \]
+%      It follows from the identity of Hopf algebras~$A_\hbar / \hbar A_\hbar = A$ that~$\mu_0$ needs to be the multiplication of~$A$ and~$\Delta_0$ the comultiplication of~$A$.
+%      The Hopf algebra structure of~$A_\hbar$, is in this sense, a \enquote{perturbation} of the one of~$A$.
+%  \end{enumerate}
 \end{remark}
 
 \begin{theorem}
-  The universal enveloping algebra~$\Univ(\sllie_2)$ admits a Hopf algebra deformation with
+  The universal enveloping algebra~$\Univ(\sllie_2)$ admits a Hopf algebra deformation
+  \[
+    \Univ_{\hbar}(\sllie_2)
+  \]
+  with
   \begin{gather*}
     [H, E] = 2E \,,
     \quad
@@ -1059,11 +1040,11 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     =
     \frac{ \e^{\hbar H} - \e^{-\hbar H} }{ \e^{\hbar} - \e^{-\hbar} } \,,
     \\
-    \Delta(E) = E \tensor K + 1 \tensor E \,,
+    \Delta(E) = E \tensor \e^{\hbar H} + 1 \tensor E \,,
     \quad
     \Delta(H) = H \tensor 1 + 1 \tensor H \,,
     \quad
-    \Delta(F) = F \tensor 1 + K^{-1} \tensor F \,,
+    \Delta(F) = F \tensor 1 + \e^{-\hbar H} \tensor F \,,
     \\
     \varepsilon(E) = 0 \,,
     \quad
@@ -1071,17 +1052,13 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     \quad
     \varepsilon(F) = 0 \,,
     \\
-    S(E) = -E K^{-1} \,,
+    S(E) = -E \e^{-\hbar H} \,,
     \quad
     S(H) = -H \,,
     \quad
-    S(F) = -K F \,.
+    S(F) = - \e^{\hbar H} F \,.
   \end{gather*}
 \end{theorem}
-
-\begin{definition}
-  The deformation of~$\Univ(\sllie_2)$ from \cref{existence of Uhsl2} is denoted by~$\Univ_{\hbar}(\sllie_2)$.
-\end{definition}
 
 \begin{remark}
   \leavevmode
@@ -1094,30 +1071,8 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         K \defined \e^{\hbar H} \,.
       \]
       The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
-      We would thus like to regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
-
-      This is possible by extension of scalars:
-      We consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
-      \[
-        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
-      \]
-      which is given as an~\module{$\lpower{\kf}{\hbar}$} by
-      \[
-        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
-        =
-        \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
-        \cong
-        \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
-        \cong
-        \lpower{\Univ(\sllie_2)}{\hbar} \,.
-      \]
-      The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get an algebra homomorphism
-      \[
-        \Univ_q(\sllie_2)
-        \to
-        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
-      \]
-      where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
+      We can thus (up to some technical details) regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
+      We refer to \cref{Uq in Uh}.
     \item
       In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
       \[
@@ -1221,15 +1176,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         =
         \qnum{n - 2i} v_i \,.
       \]
-      It follows that
-      \[
-        \irred(q^n)
-        \cong
-        \gen{1 \tensor v_0, \dotsc, 1 \tensor v_n}_{\kf(q)}
-        \subseteq
-        \lpower{\kf}{\hbar} \tensor_{\kfhbar} V(n)
-      \]
-      as~\modules{$\Univ_q(\sllie_2)$}.
+      It follows that the module~$V(n)$ becomes the irreducible representation~$\irred(q^n)$ of~$\Univ_q(\sllie_2)$, see \cref{from Vn to quantum Ln}.
   \end{enumerate}
 \end{theorem}
 
@@ -1253,19 +1200,24 @@ We refer to \cref{deformation theory} for more a more detailed account about def
 \subsection{Representation Theory of~$\sllie_2$}
 \label{appendix representation theory of sl2}
 
-% TODO: Explain the general characteristic zero case.
-
 Let~$\blie$ denote the Lie subalgebra of~$\sllie_2$ consisting of (traceless) upper triangular matrices.
-It has the matrices~$e$,~$h$ as a basis.
-Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$h^m e^n$ with~$m, n \geq 0$, and it is a subalgebra of~$\Univ(\sllie_2)$.
+It has the matrices~$E$,~$H$ as a basis.
+Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$H^m E^n$ with~$m, n \geq 0$, and it is a subalgebra of~$\Univ(\sllie_2)$.
+
+\subsubsection{Weight Spaces and Shifting of Weight Spaces}
 
 \begin{definition}
   Let~$V$ be a representation of~$\sllie_2$.
   \begin{enumerate}
     \item
-      The \defemph{weight space} of~$V$ with respect to~$\lambda$ is~$V_\lambda \defined \{ v \in V \suchthat h.v = \lambda v \}$.
+      The \defemph{weight space} of~$V$ with respect to~$\lambda$ is given by
+      \[
+        V_\lambda
+        \defined
+        \{ v \in V \suchthat H.v = \lambda v \} \,.
+      \]
     \item
-      A nonzero weight vector~$v$ of~$V$ is \defemph{primitive} if~$e.v = 0$.
+      A nonzero weight vector~$v$ of~$V$ is \defemph{primitive} if~$E.v = 0$.
     \item
       The representation~$V$ is of \defemph{highest weight~$\lambda$} if it is generated by a primitive weight vector of weight~$\lambda$.
   \end{enumerate}
@@ -1276,11 +1228,11 @@ Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$h^m e^n$ wi
   Let~$V$ be a representation of~$\sllie_2$ and let~$\lambda \in \kf$.
   Then
   \[
-    e.V_\lambda
+    E.V_\lambda
     \subseteq
     V_{\lambda + 2} \,,
     \quad
-    f.V_\lambda
+    F.V_\lambda
     \subseteq
     V_{\lambda - 2} \,.
   \]
@@ -1292,60 +1244,68 @@ Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$h^m e^n$ wi
 
 \begin{lemma}
   Let~$\kf$ be algebraically closed.
-  Then every finite-dimensional irreducible representation of~$\sllie_2$ is a highest weight representation.
+  Then every finite-dimensional irreducible representation of~$\sllie_2$ is a highest-weight representation.
 \end{lemma}
 
-There exists for every scalar~$\lambda \in \kf$ a universal representation of highest weight~$\lambda$, the so-called Verma module: 
+\subsubsection{Verma Modules}
+
+There exists for every scalar~$\lambda \in \kf$ a universal representation of highest weight~$\lambda$, the so-called Verma module. 
 
 \begin{definition}
-  For every scalar~$\lambda \in \kf$ let~$\kf_\lambda$ be the one-dimensional representation of~$\blie$ whose underlying vector space is~$\kf$ and with action of~$\blie$ given by
+  For every scalar~$\lambda \in \kf$ let~$\kf_\lambda$ be the one-dimensional representation of~$\blie$ which is given by~$\kf$ as its underlying vector space together with the action of~$\blie$ on~$\kf$ given by
   \[
-    h.1 = \lambda \,,
+    H.1 = \lambda \,,
     \quad
-    e.1 = 0 \,.
+    E.1 = 0 \,.
   \]
 \end{definition}
 
 \begin{lemma}
-  The representation~$\kf_\lambda$ can be described as an~\module{$\Univ(\blie)$} as
+  There is an isomorphism of~\modules{$\Univ(\blie)$} given by
   \[
-    \kf_\lambda
-    \cong
-    \Univ(\blie)
-    /
-    \gen{e, h - \lambda} \,.
+    \Univ(\blie) / \gen{E, H - \lambda}
+    \to
+    \kf_\lambda \,,
+    \quad
+    x
+    \mapsto
+    x.1 \,.
   \]
 \end{lemma}
 
 \begin{definition}
-  The representation
+  The \defemph{Verma module} of highest weight~$\lambda$ is the~\module{$\Univ(\sllie_2)$} given by
   \[
     \verma(\lambda)
     \defined
-    \Univ(\sllie_2) \tensor_{\Univ(\blie)} \kf_\lambda
+    \Univ(\sllie_2) \tensor_{\Univ(\blie)} \kf_\lambda \,.
   \]
-  of~$\sllie_2$ is the \defemph{Verma module} of highest weight~$\lambda$.
 \end{definition}
+
+\begin{convention}
+  From now on the field~$\kf$ is of characteristic zero.
+\end{convention}
 
 \begin{proposition}
   Let~$\lambda \in \kf$.
   \begin{enumerate}
     \item
-      The Verma module~$\verma(\lambda)$ has the basis
+      The Verma module~$\verma(\lambda)$ has the vectors
       \[
         v_i
         \defined
-        f^i \tensor 1
+        F^i \tensor 1
         \qquad
         \text{with~$i \geq 0$,} 
       \]
-      and the actions of~$e$,~$h$,~$f$ on this basis is given by
+      as a basis.
+      The actions of~$E$,~$H$,~$F$ on this basis are given by
       \[
-        f.v_i = v_{i+1} \,,
+        F.v_i = v_{i+1} \,,
         \quad
-        h.v_i = (\lambda - 2i) v_i \,,
+        H.v_i = (\lambda - 2i) v_i \,,
         \quad
-        e.v_i = i (\lambda - i + 1) v_{i-1} \,.
+        E.v_i = i (\lambda - i + 1) v_{i-1} \,.
       \]
       This action can be graphically described as in \cref{graphical representation of verma module}.
       \begin{figure}
@@ -1361,29 +1321,29 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
             \node (v2)   at (0, -2) {$v_2$};
             \node (v3)   at (0, -3) {$v_3$};
             \node (rest) at (0, -4) {$\vdots$};
-            % the action of f
+            % the action of F
             \draw[->, densely dotted] (v0) to[bendy] (v1);
             \draw[->, densely dotted] (v1) to[bendy] (v2);
             \draw[->, densely dotted] (v2) to[bendy] (v3);
             \draw[->, densely dotted] (v3) to[bendy] (rest);
-            % the action of e
+            % the action of E
             \draw[->, densely dashed ] (v1)   to[bendy] node[right] {$\scriptstyle \lambda$} (v0);
             \draw[->, densely dashed] (v2)   to[bendy] node[right] {$\scriptstyle 2(\lambda-1)$} (v1);
             \draw[->, densely dashed] (v3)   to[bendy] node[right] {$\scriptstyle 3(\lambda-2)$} (v2);
             \draw[->, densely dashed] (rest) to[bendy] (v3);
-            % the action of h
+            % the action of H
             \draw[->] (v0) to[loopy] node[left]{$\scriptstyle \lambda$} (v0);
             \draw[->] (v1) to[loopy] node[left]{$\scriptstyle \lambda-2$} (v1);
             \draw[->] (v2) to[loopy] node[left]{$\scriptstyle \lambda-4$} (v2);
             \draw[->] (v3) to[loopy] node[left]{$\scriptstyle \lambda-6$} (v3);
           \end{tikzpicture}
         \end{center}
-        \caption{The Verma module~$\verma(\lambda)$.}
+        \caption{
+          The Verma module~$\verma(\lambda)$ of~$\Univ(\sllie_2)$.
+          The action of~$H$ is depicted by loops, the action of~$F$ by dotted arrows and the action of~$E$ by dashed arrows.
+        }
         \label{graphical representation of verma module}
       \end{figure}
-  \end{enumerate}
-  Suppose that the field~$\kf$ is of characteristic zero.
-  \begin{enumerate}[resume*]
     \item
       The Verma module~$\verma(\lambda)$ is a representation of highest weight~$\lambda$.
     \item
@@ -1394,7 +1354,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
         \{
           v \in V
         \suchthat
-          \text{$v$ is of weight~$\lambda$ with~$e.v = 0$}
+          \text{$v$ is of weight~$\lambda$ with~$E.v = 0$}
         \} \,,
         \\
         \varphi
@@ -1414,7 +1374,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
         \item
           If~$\lambda \notin \Natural$ then the representation~$\verma(\lambda)$ is irreducible.
         \item
-          If~$\lambda = n \in \Natural$ then the representation~$\verma(\lambda)$ has a unique nonzero, proper subrepresentation, which is spanned by
+          If~$\lambda = n \in \Natural$ then the representation~$\verma(\lambda)$ has a unique nonzero, proper subrepresentation, which is spanned by the vectors
           \[
             v_i
             \qquad
@@ -1426,7 +1386,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
 \end{proposition}
 
 \begin{definition}
-  Suppose that~$\kf$ is of characteristic zero and let~$\lambda \in \kf$.
+  Let~$\lambda \in \kf$.
   \begin{enumerate}
     \item
       For~$\lambda \notin \Natural$ let~$\irred(\lambda) \defined \verma(\lambda)$.
@@ -1435,8 +1395,10 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
   \end{enumerate}
 \end{definition}
 
+\subsubsection{Classifications of Certain Irreducible Representations}
+
 \begin{theorem}
-  Let~$\kf$ be algebraically closed field of characteristic zero.
+  \leavevmode
   \begin{enumerate}
     \item
       There is a one-to-one correspondence given by
@@ -1461,7 +1423,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
         =
         n + 1 \,.
       \]
-      The above correspondence does therefore restrict to a one-to-one correspondence
+      If~$\kf$ is algebraically closed (so that every irreducible finite-dimensional~\representation{$\sllie_2$} is a highest-weight representation) then the above correspondence does therefore restrict to a one-to-one correspondence
       \begin{align*}
         \left\{
           \begin{tabular}{@{}l@{}}
@@ -1491,13 +1453,13 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
     \defined
     \frac{1}{i!} v_i \,.
   \]
-  The actions of~$e$ and~$f$ then become
+  The actions of~$E$ and~$F$ then become
   \[
-    e.w_i = (n-i+1) w_{i-1} \,,
+    E.w_i = (n-i+1) w_{i-1} \,,
     \quad
-    f.w_i = (i+1) w_{i+1} \,.
+    F.w_i = (i+1) w_{i+1} \,.
   \]
-  The actions of~$e$,~$h$,~$f$ on~$\irred(n)$ can now be graphically be represented as in \cref{graphical representation of irreducible representation}.
+  The actions of~$E$,~$H$,~$F$ on~$\irred(n)$ can now be graphically be represented as in \cref{graphical representation of irreducible representation}.
 %  \begin{figure}
 %    \begin{center}
 %      \begin{tikzpicture}[
@@ -1541,6 +1503,8 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
 %  \end{figure}
 \end{remark}
 
+\subsubsection{Semisimplicity of Finite-Dimensional Representations}
+
 \begin{theorem}[Weyl]
   Let~$\kf$ be algebraically closed.
   Every finite-dimensional representation of~$\sllie_2$ is semisimple.
@@ -1552,7 +1516,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
 \end{corollary}
 
 The decomposition of a finite-dimensional representation of~$\sllie_2$ into irreducible representations can be read off from its weight space decomposition.
-From this the following result can be shown:
+From this the following result can be shown.
 
 \begin{proposition}[Clebsch--Gordan]
   Let~$n$,~$m$ be natural numbers with~$n \geq m$.
@@ -1564,11 +1528,103 @@ From this the following result can be shown:
   \]
 \end{proposition}
 
+\subsubsection{The General Case of Characteristic Zero}
+
+We have above used a few times the additional assumption that~$\kf$ is algebraically closed.
+We will now explain how to get rid of this assumption.
+For this we first recall some standard results about semisimplicity of algebras.
+
+\begin{lemma}
+  Let~$\kf$ be any field and let~$V$ be a finite-dimensional~\vectorspaces{$\kf$}.
+  Let~$A$ be a subalgebra of~$\End_{\kf}(V)$.
+  Then~$A$ is semisimple if and only if~$V$ is semisimple as an~\module{$A$}.
+\end{lemma}
+
+\begin{proof}
+  See~\cite[XVII,~\S5,~Proposition~4.7]{lang_algebra} and~\cite{stackexchange_lang_proof}.
+\end{proof}
+
+\begin{definition}
+  The \defemph{Jacobson radical} of a ring~$R$ is the intersection of all maximal left ideal of~$R$.
+  It is denoted by~$\Jac(R)$.
+\end{definition}
+
+\begin{remark}
+  Let~$R$ be a ring.
+  The irreducible~\modules{$R$} are up to isomorphism precisely those~\modules{$R$} of the form~$R/\mathfrak{m}$, where~$\mathfrak{m}$ is a maximal left ideal in~$R$.
+  The Jacobson radical of~$R$ does therefore consists of precisely those elements of~$R$ which annihilate every irreducible~\module{$R$}.
+\end{remark}
+
+\begin{proposition}
+  Let~$A$ be a finite-dimensional~\algebra{$\kf$}.
+  \begin{enumerate}
+    \item
+      The Jacobson radical~$\Jac(A)$ is a nilpotent, two-sided ideal in~$A$.
+    \item
+      Every nilpotent, two-sided ideal of~$A$ is contained in the Jacobson raidcal~$\Jac(A)$.
+      It is thus the unique maximal nilpotent, two-sided ideal.
+    \item
+      The following conditions on~$A$ are equivalent:
+      \begin{enumerate}[label = \roman*.]
+        \item
+          The algebra~$A$ is semisimple.
+        \item
+          The Jacobson radical~$J(A)$ vanishes.
+        \item
+          The algebra~$A$ does not contain any nonzero nilpotent, two-sided ideal.
+      \end{enumerate}
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  See~\cite[\S4]{lam_first_course}.
+\end{proof}
+
+\begin{corollary}
+  Let~$A$ be a finite-dimensional~\algebra{$\kf$}.
+  Let~$\Kf$ be a field extension of~$\kf$ and suppose that~$\Kf \tensor_{\kf} A$ is semisimple.
+  Then~$A$ is semisimple.
+\end{corollary}
+
+% TODO: Add a proof
+
+\begin{corollary}
+  \label{extension of scalars reflects irreduciblity}
+  Let~$A$ be an~\algebra{$\kf$} and let~$M$ be a finite-dimensional~\module{$A$}.
+  Let~$\Kf$ be a field extension of~$\kf$ and let
+  \[
+    A_{\Kf} \defined \Kf \tensor_{\kf} A \,,
+    \quad
+    M_{\Kf} \defined \Kf \tensor_{\kf} M \,.
+  \]
+  If~$M_{\Kf}$ is irreducible as an~\module{$A_{\Kf}$} then~$M$ is irreducible as an~\module{$A$}.
+\end{corollary}
+
+% TODO: Add a proof.
+
+\begin{remark}
+  \Cref{extension of scalars reflects irreduciblity} asserts that extension of scalars reflects irreducibility of finite-dimensional modules.
+  It is generally not true that it preserves irreducibility:
+  it may happen that~$M$ is irreducible as an~\module{$A$} but~$M_{\Kf}$ is not irreducible as an~\module{$A_{\Kf}$}.
+\end{remark}
+
+\begin{theorem}
+  Let~$\kf$ be a field of characteristic zero.
+  \begin{enumerate}
+    \item
+      Every finite-dimensional~\representation{$\sllie_2$} is semisimple.
+    \item
+      Every finite-dimensiona~\representation{$\sllie_2$} decomposes into weight spaces, and all occuring weights are integral.
+    \item
+      The irreducible finite-dimensional representations of~$\sllie_2$ are given by~$\irred(n)$ for~$n \in \Natural$.
+  \end{enumerate}
+\end{theorem}
+
+% TODO: Add a proof.
 
 
 
-
-\subsection{An alternative presentation for~$\Univ_q(\sllie_2)$}
+\subsection{An Alternative Presentation for~$\Univ_q(\sllie_2)$}
 \label{alternative presentation for quantum sl2}
 
 Let~$q \in \kf$ and let~$U_q$ be the algebra given by the generators
@@ -2440,6 +2496,71 @@ for every~$\lambda$.
 
 
 
+\subsection{Clebsch--Gordan for~$\Univ_q(\sllie_2)$}
+\label{quantum clebsch gordan}
+
+\begin{proposition}
+  For all~$\delta, \varepsilon \in \{1, -1\}$ and~$n, m \in \Natural$ with~$n \geq m$ we have
+  \[
+    \irred(\delta q^n) \tensor \irred(\varepsilon q^m)
+    \cong
+    \irred(\delta \varepsilon q^{n+m})
+    \oplus
+    \irred(\delta \varepsilon q^{n+m-2})
+    \oplus
+    \dotsb
+    \oplus
+    \irred(\delta \varepsilon q^{n-m}) \,.
+  \]
+\end{proposition}
+
+\begin{proof}
+  This follows from \cref{decomposition from quantum weight spaces} and \cref{quantum weight spaces of tensor product}.
+\end{proof}
+
+
+
+\subsection{$\Univ_q(\sllie_2)$ inside of~$\Univ_{\hbar}(\sllie_2)$}
+\label{Uq in Uh}
+
+We consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
+\[
+  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
+\]
+which is given as an~\module{$\lpower{\kf}{\hbar}$} by
+\[
+  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
+  =
+  \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
+  \cong
+  \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
+  \cong
+  \lpower{\Univ(\sllie_2)}{\hbar} \,.
+\]
+The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get an algebra homomorphism
+\[
+  \Univ_q(\sllie_2)
+  \to
+  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
+\]
+where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
+
+
+
+\subsection{From~$V(n)$ to~$\irred(q^n)$}
+\label{from Vn to quantum Ln}
+
+It follows that
+\[
+  \irred(q^n)
+  \cong
+  \gen{1 \tensor v_0, \dotsc, 1 \tensor v_n}_{\kf(q)}
+  \subseteq
+  \lpower{\kf}{\hbar} \tensor_{\kfhbar} V(n)
+\]
+as~\modules{$\Univ_q(\sllie_2)$}.
+
+
 
 
 \section{Deformation Theory}
@@ -3072,15 +3193,18 @@ The following is taken mostly from \cite[Chapter~6]{guide_to_quantum_groups}.
   \end{equation}
   which are perturbations of the structure maps of~$A$, i.e.\ they reduce modulo~$\hbar$ to the structure maps of~$A$.
 
-%  We can for example characterize the comultiplication~$\Delta_{\hbar}$ by a sequence of bilinear map~$\Delta_i \colon A \to A \tensor A$ such that
-%  \[
-%    \Delta_{\hbar}(a)
-%    =
-%    \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
-%  \]
-%  for every~$a \in A$.
-%  Here~$\Delta_0$ needs to be the original comultiplication from~$A$.
-  % TODO: Put this somewhere in the appendix.
+  We can for example characterize the comultiplication~$\Delta_{\hbar}$ of~$A_{\hbar}$ by a sequence of bilinear map
+  \[
+    \Delta_i \colon A \to A \tensor A
+  \]
+  such that
+  \[
+    \Delta_{\hbar}(a)
+    =
+    \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
+  \]
+  for every~$a \in A$.
+  Here~$\Delta_0$ needs to be the original comultiplication from~$A$.
 \end{remark}
 
 \begin{example}
