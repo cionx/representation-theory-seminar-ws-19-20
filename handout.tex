@@ -174,11 +174,11 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
   \begin{gather}
     E \,,
     \quad
-    F \,,
-    \quad
     K \,,
     \quad
-    K^{-1}
+    K^{-1} \,,
+    \quad
+    F
     \notag
   \shortintertext{subject to the relations}
     K K^{-1} = 1 = K^{-1} K \,,
@@ -204,7 +204,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
 
 \begin{remark}[The case~$q = 1$]
   \label{quantum U1}
-  The algebra~$\Univ_q(\sllie)$ admits another useful presentations:
+  The algebra~$\Univ_q(\sllie)$ admits another useful presentation:
   One introduces the element
   \[
     \widetilde{H}
@@ -212,7 +212,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
     \frac{K - K^{-1}}{q - q^{-1}}
   \]
   as an additional generator, and then adjust the relations~\eqref{standard presentation}.
-  The resulting presentation does then make sense for any~$q \in \kf$, and one has
+  This presentation of~$\Univ_q(\sllie_2)$ does then make sense for any~$q \in \kf$, and for~$q = 1$ one has
   \[
     \Univ_1(\sllie_2)
     \cong
@@ -233,7 +233,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
 \end{remark}
 
 \begin{remark}
-  One might think about~$E$ and~$F$ as the usual elements of~$\sllie_2$, but~$\Univ_q(\sllie_2)$ does not contain~$H$.
+  One might think about~$E$ and~$F$ as the usual elements of~$\sllie_2$, but~$\Univ_q(\sllie_2)$ does not contain the element~$H$.
   We will later see that the algebra~$\Univ_q(\sllie)$ lives (up to some technical details) inside an~\algebra{$\kfhbar$}~$\Univ_{\hbar}(\sllie_2)$ that also contains~$H$, and in which
   \[
     q = \e^{\hbar} \,,
@@ -356,7 +356,7 @@ One can depict these irreducible modules as in \cref{graphical representation of
     \end{tikzpicture}
   \end{center}
   \caption{%
-    The irreducible representation~$\irred(\pm, n)$ of~$\Univ_1(\sllie_2)$.
+    The irreducible representations~$\irred(\pm, n)$ of~$\Univ_1(\sllie_2)$.
     On the left side loops depict the action of~$K$, and on the right side they depict the action of~$\widetilde{H}$.
     On both sides dashed arrows depict the action of~$E$ and dotted arrows depict the action of~$F$.
   }
@@ -572,8 +572,8 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
           \end{tikzpicture}
         \end{center}
         \caption{
-          The Verma module~$\verma(\lambda)$.
-          On the left side the loopes depict the action of~$K$, an on the right side they depict the action of~$\widetilde{H}$.
+          The Verma module~$\verma(\lambda)$ of~$\Univ_q(\sllie_2)$.
+          s depict the action of~$K$, an on the right side they depict the action of~$\widetilde{H}$.
           On both sides the action of~$F$ is depicted by dotted arrows and the action of~$E$ by dashed arrows.
         }
         \label{graphical representation of quantum verma module}
@@ -684,14 +684,16 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         \defined
         \frac{m_i}{\qnum{i}!}
       \]
-      the actions of~$E$,~$F$ thus become
+      the actions of~$E$,~$K$,~$F$ thus become
       \[
         E w_i = \pm \qnum{n-i+1} w_{i-1} \,,
         \quad
+        K w_i = \pm q^{n-2i} w_i \,,
+        \quad
         F w_i = \qnum{i+1} w_{i+1} \,.
       \]
-      The action of~$E$,~$H$,~$K$ on~$\irred(\pm q^n)$ can therefore be graphically be represented as in \cref{graphical representation of irreducible quantum representation}
-      \begin{figure}
+      The action of~$E$,~$K$,~$F$ on~$\irred(\pm q^n)$ can therefore be graphically be represented as in \cref{graphical representation of irreducible quantum representation}.
+      \begin{figure}[t]
         \begin{center}
           \begin{tikzpicture}[
               yscale = 1.4,
@@ -766,7 +768,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
           \end{tikzpicture}
         \end{center}
         \caption{
-          The irreducible representation~$\irred(\pm q^n)$ of~$\Univ_q(\sllie_2)$.
+          The irreducible representations~$\irred(\pm q^n)$ of~$\Univ_q(\sllie_2)$.
           On the left side the loops depict the action of~$K$, an on the right side they depict the action of~$\widetilde{H}$.
           On both sides the action of~$F$ is depicted by dotted arrows and the action of~$E$ by dashed arrows.
         }
@@ -824,30 +826,26 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 
 \begin{proposition}
   \label{hopf algebra structure on quantum sl2}
-  The algebra~$\Univ_q(\sllie_2)$ becomes a Hopf algebra when endowed with the comultiplication
-  \[
+  The algebra~$\Univ_q(\sllie_2)$ becomes a Hopf algebra when endowed with the comultiplication~$\Delta$, the counit~$\varepsilon$ and the antipode~$S$ given by
+  \begin{gather*}
     \Delta(E) = E \tensor K + 1 \tensor E \,,
     \quad
     \Delta(F) = F \tensor 1 + K^{-1} \tensor F \,,
     \quad
     \Delta(K) = K \tensor K \,,
-  \]
-  the counit
-  \[
+    \\
     \varepsilon(E) = 0 \,,
     \quad
     \varepsilon(F) = 0 \,,
     \quad
     \varepsilon(K) = 1
-  \]
-  and the antipode
-  \[
+    \\
     S(E) = -E K^{-1} \,,
     \quad
     S(F) = -KF \,,
     \quad
     S(K) = K^{-1} \,.
-  \]
+  \end{gather*}
 \end{proposition}
 
 \begin{proof}
@@ -1030,11 +1028,11 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
   \[
     \Univ_{\hbar}(\sllie_2)
   \]
-  with
+  that is given by
   \begin{gather*}
     [H, E] = 2E \,,
     \quad
-    [H, F] = 2F \,,
+    [H, F] = -2F \,,
     \quad
     [E, F]
     =
@@ -1070,9 +1068,8 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
         \quad
         K \defined \e^{\hbar H} \,.
       \]
-      The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
+      The elements~$q$,~$E$,~$K$,~$K^{-1}$,~$F$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
       We can thus (up to some technical details) regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
-      We refer to \cref{Uq in Uh}.
     \item
       In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
       \[
@@ -1120,7 +1117,7 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
       \begin{figure}
         \begin{center}
           \begin{tikzpicture}[
-              yscale = 1.2,
+              yscale = 1.3,
               bendy/.style = {bend right = 25},
               loopy/.style = {out = 190, in = 170, looseness = 40}
             ]
@@ -1132,21 +1129,93 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
             \node (wn-2) at (0, -4) {$w_{n-2}$};
             \node (wn-1) at (0, -5) {$w_{n-1}$};
             \node (wn)   at (0, -6) {$w_n$};
-            % the action of h
+            % the action of H
             \draw[->] (w0)    to[loopy] node[left]{$\scriptstyle n$} (w0);
             \draw[->] (w1)    to[loopy] node[left]{$\scriptstyle n-2$} (w1);
             \draw[->] (w2)    to[loopy] node[left]{$\scriptstyle n-4$} (w2);
             \draw[->] (wn-2)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle -n+4$} (wn-2);
             \draw[->] (wn-1)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle -n+2$} (wn-1);
             \draw[->] (wn)    to[loopy] node[left]{$\scriptstyle -n$} (wn);
-            % the action of f
+            % the action of F
             \draw[->, densely dotted] (w0)    to[bendy] node[left] {$\scriptstyle \qnum{1}$} (w1);
             \draw[->, densely dotted] (w1)    to[bendy] node[left] {$\scriptstyle \qnum{2}$} (w2);
             \draw[->, densely dotted] (w2)    to[bendy] (rest);
             \draw[->, densely dotted] (rest)  to[bendy] (wn-2);
             \draw[->, densely dotted] (wn-2)  to[bendy] node[left] {$\scriptstyle \qnum{n-1}$} (wn-1);
             \draw[->, densely dotted] (wn-1)  to[bendy] node[left] {$\scriptstyle \qnum{n}$} (wn);
-            % the action of e
+            % the action of E
+            \draw[->, densely dashed] (w1)    to[bendy] node[right] {$\scriptstyle \qnum{n}$} (w0);
+            \draw[->, densely dashed] (w2)    to[bendy] node[right] {$\scriptstyle \qnum{n-1}$} (w1);
+            \draw[->, densely dashed] (rest)  to[bendy] (w2);
+            \draw[->, densely dashed] (wn-2)  to[bendy] (rest);
+            \draw[->, densely dashed] (wn-1)  to[bendy] node[right] {$\scriptstyle \qnum{2}$} (wn-2);
+            \draw[->, densely dashed] (wn)    to[bendy] node[right] {$\scriptstyle \qnum{1}$} (wn-1);
+          \end{tikzpicture}
+          \hspace{3em}
+          \begin{tikzpicture}[
+              yscale = 1.3,
+              bendy/.style = {bend right = 25},
+              loopy/.style = {out = 190, in = 170, looseness = 40}
+            ]
+            % nodes
+            \node (w0)   at (0,  0) {$w_0$};
+            \node (w1)   at (0, -1) {$w_1$};
+            \node (w2)   at (0, -2) {$w_2$};
+            \node (rest) at (0, -3) {$\vdots$};
+            \node (wn-2) at (0, -4) {$w_{n-2}$};
+            \node (wn-1) at (0, -5) {$w_{n-1}$};
+            \node (wn)   at (0, -6) {$w_n$};
+            % the action of K
+            \draw[->] (w0)    to[loopy] node[left]{$\scriptstyle q^n$} (w0);
+            \draw[->] (w1)    to[loopy] node[left]{$\scriptstyle q^{n-2}$} (w1);
+            \draw[->] (w2)    to[loopy] node[left]{$\scriptstyle q^{n-4}$} (w2);
+            \draw[->] (wn-2)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle q^{-n+4}$} (wn-2);
+            \draw[->] (wn-1)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle q^{-n+2}$} (wn-1);
+            \draw[->] (wn)    to[loopy] node[left]{$\scriptstyle q^{-n}$} (wn);
+            % the action of F
+            \draw[->, densely dotted] (w0)    to[bendy] node[left] {$\scriptstyle \qnum{1}$} (w1);
+            \draw[->, densely dotted] (w1)    to[bendy] node[left] {$\scriptstyle \qnum{2}$} (w2);
+            \draw[->, densely dotted] (w2)    to[bendy] (rest);
+            \draw[->, densely dotted] (rest)  to[bendy] (wn-2);
+            \draw[->, densely dotted] (wn-2)  to[bendy] node[left] {$\scriptstyle \qnum{n-1}$} (wn-1);
+            \draw[->, densely dotted] (wn-1)  to[bendy] node[left] {$\scriptstyle \qnum{n}$} (wn);
+            % the action of E
+            \draw[->, densely dashed] (w1)    to[bendy] node[right] {$\scriptstyle \qnum{n}$} (w0);
+            \draw[->, densely dashed] (w2)    to[bendy] node[right] {$\scriptstyle \qnum{n-1}$} (w1);
+            \draw[->, densely dashed] (rest)  to[bendy] (w2);
+            \draw[->, densely dashed] (wn-2)  to[bendy] (rest);
+            \draw[->, densely dashed] (wn-1)  to[bendy] node[right] {$\scriptstyle \qnum{2}$} (wn-2);
+            \draw[->, densely dashed] (wn)    to[bendy] node[right] {$\scriptstyle \qnum{1}$} (wn-1);
+          \end{tikzpicture}
+          \hspace{3em}
+          \begin{tikzpicture}[
+              yscale = 1.3,
+              bendy/.style = {bend right = 25},
+              loopy/.style = {out = 190, in = 170, looseness = 40}
+            ]
+            % nodes
+            \node (w0)   at (0,  0) {$w_0$};
+            \node (w1)   at (0, -1) {$w_1$};
+            \node (w2)   at (0, -2) {$w_2$};
+            \node (rest) at (0, -3) {$\vdots$};
+            \node (wn-2) at (0, -4) {$w_{n-2}$};
+            \node (wn-1) at (0, -5) {$w_{n-1}$};
+            \node (wn)   at (0, -6) {$w_n$};
+            % the action of \widetilde{H}
+            \draw[->] (w0)    to[loopy] node[left]{$\scriptstyle \qnum{n}$} (w0);
+            \draw[->] (w1)    to[loopy] node[left]{$\scriptstyle \qnum{n-2}$} (w1);
+            \draw[->] (w2)    to[loopy] node[left]{$\scriptstyle \qnum{n-4}$} (w2);
+            \draw[->] (wn-2)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle \qnum{-n+4}$} (wn-2);
+            \draw[->] (wn-1)  to[loopy, looseness = 22.5] node[left]{$\scriptstyle \qnum{-n+2}$} (wn-1);
+            \draw[->] (wn)    to[loopy] node[left]{$\scriptstyle \qnum{-n}$} (wn);
+            % the action of F
+            \draw[->, densely dotted] (w0)    to[bendy] node[left] {$\scriptstyle \qnum{1}$} (w1);
+            \draw[->, densely dotted] (w1)    to[bendy] node[left] {$\scriptstyle \qnum{2}$} (w2);
+            \draw[->, densely dotted] (w2)    to[bendy] (rest);
+            \draw[->, densely dotted] (rest)  to[bendy] (wn-2);
+            \draw[->, densely dotted] (wn-2)  to[bendy] node[left] {$\scriptstyle \qnum{n-1}$} (wn-1);
+            \draw[->, densely dotted] (wn-1)  to[bendy] node[left] {$\scriptstyle \qnum{n}$} (wn);
+            % the action of E
             \draw[->, densely dashed] (w1)    to[bendy] node[right] {$\scriptstyle \qnum{n}$} (w0);
             \draw[->, densely dashed] (w2)    to[bendy] node[right] {$\scriptstyle \qnum{n-1}$} (w1);
             \draw[->, densely dashed] (rest)  to[bendy] (w2);
@@ -1156,8 +1225,9 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
           \end{tikzpicture}
         \end{center}
         \caption{%
-          The irreducible representation~$\irred(n)$ of~$\Univ(\sllie_2)$.
-          Loops depict the action of~$H$, dashed arrows the action of~$E$ and dotted arrows the action of~$F$.
+          The indecomposable representation~$V(n)$ of~$\Univ(\sllie_2)$.
+          On the left side loops depict the action of~$H$, in the middle they depict the action of~$K$, and on the right they depict the action of~$\widetilde{H}$.
+          Dashed arrows depict the action of~$E$ and dotted arrows the action of~$F$.
         }
         \label{graphical representation of deformed representations}
       \end{figure}
@@ -1166,17 +1236,17 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
     \item
       The~\module{$\Univ_{\hbar}(\sllie_2)$}~$V(n)$ reduces modulo~$\hbar$ to the irreducible representations~$\irred(n)$ of~$\Univ(\sllie_2)$.
     \item
-      The actions of~$K$ and~$\widetilde{H}$ on~$V(n)$ is given by
+      The actions of~$K$ and~$\widetilde{H}$ on~$V(n)$ are given by
       \[
-        K v_i
+        K w_i
         =
-        q^{n - 2i} v_i \,,
+        q^{n - 2i} w_i \,,
         \quad
-        \widetilde{H} v_i
+        \widetilde{H} w_i
         =
-        \qnum{n - 2i} v_i \,.
+        \qnum{n - 2i} w_i \,.
       \]
-      It follows that the module~$V(n)$ becomes the irreducible representation~$\irred(q^n)$ of~$\Univ_q(\sllie_2)$, see \cref{from Vn to quantum Ln}.
+      It follows that the module~$V(n)$ becomes the irreducible representation~$\irred(q^n)$ of~$\Univ_q(\sllie_2)$.
   \end{enumerate}
 \end{theorem}
 
@@ -1186,7 +1256,7 @@ We refer to \cref{deformation theory} for more a more detailed account about def
 
 
 
-\newpage
+\clearpage
 \appendix
 
 
@@ -1451,7 +1521,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
   \[
     w_i
     \defined
-    \frac{1}{i!} v_i \,.
+    \frac{v_i}{i!} \,.
   \]
   The actions of~$E$ and~$F$ then become
   \[
@@ -1510,9 +1580,14 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
   Every finite-dimensional representation of~$\sllie_2$ is semisimple.
 \end{theorem}
 
+\begin{proof}
+  See~\cite[Theorem~6.3]{humphreys_lie_algebras}.
+\end{proof}
+
 \begin{corollary}
   Any finite-dimensional representation of~$\sllie_2$ admits a weight space decomposition.
   All occuring weights are integral.
+  \qed
 \end{corollary}
 
 The decomposition of a finite-dimensional representation of~$\sllie_2$ into irreducible representations can be read off from its weight space decomposition.
@@ -1535,13 +1610,14 @@ We will now explain how to get rid of this assumption.
 For this we first recall some standard results about semisimplicity of algebras.
 
 \begin{lemma}
+  \label{semisimplicity via faithful representation}
   Let~$\kf$ be any field and let~$V$ be a finite-dimensional~\vectorspaces{$\kf$}.
   Let~$A$ be a subalgebra of~$\End_{\kf}(V)$.
   Then~$A$ is semisimple if and only if~$V$ is semisimple as an~\module{$A$}.
 \end{lemma}
 
 \begin{proof}
-  See~\cite[XVII,~\S5,~Proposition~4.7]{lang_algebra} and~\cite{stackexchange_lang_proof}.
+  See~\cite[XVII,~\S5,~Proposition~4.7]{lang_algebra} and~\cite{stackexchange_lang_proof}, or~\cite[Proposition~5.13]{milne_lag}
 \end{proof}
 
 \begin{definition}
@@ -1580,16 +1656,22 @@ For this we first recall some standard results about semisimplicity of algebras.
   See~\cite[\S4]{lam_first_course}.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}[{\cite[Proposition~5.11]{milne_lag}}]
+  \label{extension of scalars for algebras reflect semisimple}
   Let~$A$ be a finite-dimensional~\algebra{$\kf$}.
   Let~$\Kf$ be a field extension of~$\kf$ and suppose that~$\Kf \tensor_{\kf} A$ is semisimple.
   Then~$A$ is semisimple.
 \end{corollary}
 
-% TODO: Add a proof
+\begin{proof}
+  We find for the Jacobson radical~$\Jac(A)$ that~$\Kf \tensor \Jac(A)$ is a nilpotent, two-sided ideal of~$\Kf \tensor A$.
+  It is thus contained in the Jacobson radical~$\Jac(\Kf \tensor A)$.
+  This Jacobson radical vanishes because~$\Kf \tensor A$ is semisimple.
+  It follows that~$\Kf \tensor \Jac(A) = 0$ and thus~$\Jac(A) = 0$.
+\end{proof}
 
 \begin{corollary}
-  \label{extension of scalars reflects irreduciblity}
+  \label{extension of scalars reflects semisimplicity of fd representations}
   Let~$A$ be an~\algebra{$\kf$} and let~$M$ be a finite-dimensional~\module{$A$}.
   Let~$\Kf$ be a field extension of~$\kf$ and let
   \[
@@ -1597,16 +1679,18 @@ For this we first recall some standard results about semisimplicity of algebras.
     \quad
     M_{\Kf} \defined \Kf \tensor_{\kf} M \,.
   \]
-  If~$M_{\Kf}$ is irreducible as an~\module{$A_{\Kf}$} then~$M$ is irreducible as an~\module{$A$}.
+  If~$M_{\Kf}$ is semisimple as an~\module{$A_{\Kf}$} then~$M$ is semisimple as an~\module{$A$}.
 \end{corollary}
 
-% TODO: Add a proof.
+\begin{proof}
+  We replace~$A$ by its image in~$\End_{\kf}(M)$ and then apply \cref{semisimplicity via faithful representation} and \cref{extension of scalars for algebras reflect semisimple}.
+\end{proof}
 
-\begin{remark}
-  \Cref{extension of scalars reflects irreduciblity} asserts that extension of scalars reflects irreducibility of finite-dimensional modules.
-  It is generally not true that it preserves irreducibility:
-  it may happen that~$M$ is irreducible as an~\module{$A$} but~$M_{\Kf}$ is not irreducible as an~\module{$A_{\Kf}$}.
-\end{remark}
+%\begin{remark}
+%  \Cref{extension of scalars reflects irreduciblity} asserts that extension of scalars reflects irreducibility of finite-dimensional modules.
+%  It is generally not true that it preserves semisimplicity:
+%  It may happen that~$M$ is semisimple as an~\module{$A$} but~$M_{\Kf}$ is not semisimple as an~\module{$A_{\Kf}$}.
+%\end{remark}
 
 \begin{theorem}
   Let~$\kf$ be a field of characteristic zero.
@@ -1614,13 +1698,42 @@ For this we first recall some standard results about semisimplicity of algebras.
     \item
       Every finite-dimensional~\representation{$\sllie_2$} is semisimple.
     \item
-      Every finite-dimensiona~\representation{$\sllie_2$} decomposes into weight spaces, and all occuring weights are integral.
+      Every finite-dimensional~\representation{$\sllie_2$} decomposes into weight spaces, and all occuring weights are integral.
     \item
       The irreducible finite-dimensional representations of~$\sllie_2$ are given by~$\irred(n)$ for~$n \in \Natural$.
   \end{enumerate}
 \end{theorem}
 
-% TODO: Add a proof.
+\begin{proof}
+  Let~$\Kf$ be an algebraic closure of~$\kf$.
+  \begin{enumerate}
+    \item
+      We have previously seen that the assertion holds for~$\sllie_2(\Kf)$.
+      We have
+      \[
+        \Kf \tensor \Univ(\sllie_2(\kf))
+        \cong
+        \Univ(\sllie_2(\Kf))
+      \]
+      whence the assertion follows for~$\sllie_2(\kf)$ from \cref{extension of scalars reflects semisimplicity of fd representations}.
+    \item
+      The assertion holds for~$\sllie_2(\Kf)$, as previously seen.
+      Let~$M$ be a finite-dimensional representaion of~$\sllie_2(\kf)$.
+      Then~$\Kf \tensor_{\kf} M$ is a finite-dimensional representation of~$\sllie_2(\Kf)$ and it follows that~$\Kf \tensor_{\kf} M$ decomposes into weight spaces as described.
+      This means that~$\Kf \tensor_{\kf} M$ is annihilated by the element
+      \[
+        x \defined \prod_{j=-n}^n (H - j)
+      \]
+      of~$\Univ(\sllie_2(\Kf))$ for some sufficiently large~$n \geq 0$.
+      It follows that~$x$, regarded as an element of~$\Univ(\sllie_2(\kf))$, annihilates the original representation~$M$.
+      The assertion for~$\sllie_2(\kf)$ follows from this.
+    \item
+      It follows from the previous assertion that every finite-dimensional irreducible~\representation{$\sllie_2(\kf)$} is a highest-weight representations.
+      The classification of irreducible, finite-dimensional highest-weight representations of~$\sllie_2$ works the same over every field of characteristic zero.
+      We hence get for~$\sllie_2(\kf)$ the asserted classification.
+    \qedhere
+  \end{enumerate}
+\end{proof}
 
 
 
@@ -1704,7 +1817,7 @@ and the relations
 \end{proposition}
 
 \begin{proof}
-  See \cite[Proof of Proposition~VI.2.2]{kassel_quantum}.
+  See~\cite[Proof of Proposition~VI.2.2]{kassel_quantum}.
 \end{proof}
 
 \begin{remark}
@@ -1778,7 +1891,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
 
 \begin{proof}
   For~$r = 0$ both sides vanish and for~$r = 1$ this is one of the defining relations of~$\Univ_q(\sllie_2)$.
-  For~$r \geq 2$ the assertion follows by induction, see \cite[Appendix 1.3~(5)]{jantzen_quantum}.
+  For~$r \geq 2$ the assertion follows by induction, see~\cite[Appendix 1.3~(5)]{jantzen_quantum}.
 \end{proof}
 
 \begin{corollary}
@@ -1824,7 +1937,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
     \text{with~$l, n \in \Natural$ and~$m \in \Integer$}.
   \]
   There exists an action of~$\Univ_q(\sllie_2)$ on~$V$ by using the formulas from \cref{technical formulas}, with~$F^l K^m E^n$ replaced by~$X^l Y^n Z^m$.
-  (It has to be checked that this proposed action is compatible with the defining relations of~$\Univ_q(\sllie_2)$, see \cite[Appendix 1.5]{jantzen_quantum}.)
+  (It has to be checked that this proposed action is compatible with the defining relations of~$\Univ_q(\sllie_2)$, see~\cite[Appendix 1.5]{jantzen_quantum}.)
   The elements
   \[
     F^l K^m E^n \cdot X^0 Y^0 Z^0
@@ -1844,7 +1957,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
   \begin{enumerate}
     \item
       The universal enveloping algebra~$\Univ(\sllie_2)$ is noetherian and has no nonzero zero divisors.
-      The same holds for~$\Univ_q(\sllie_2)$, see \cite[Proposition~VI.1.4]{kassel_quantum} and \cite[Propositon~1.8]{jantzen_quantum}.
+      The same holds for~$\Univ_q(\sllie_2)$, see~\cite[Proposition~VI.1.4]{kassel_quantum} and~\cite[Propositon~1.8]{jantzen_quantum}.
     \item
       The algebra~$\Univ_q(\sllie_2)$ admits a grading such that~$E$,~$K$,~$F$ are homogeneous with
       \[
@@ -1961,7 +2074,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
 \end{lemma}
 
 \begin{proof}
-  See \cite[Proposition~2.1]{jantzen_quantum} and \cite[Proposition~2.3]{jantzen_quantum}.
+  See~\cite[Proposition~2.1]{jantzen_quantum} and~\cite[Proposition~2.3]{jantzen_quantum}.
 \end{proof}
 
 \begin{proposition}
@@ -2450,7 +2563,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
 \begin{remark}
   The center of the universal enveloping algebra~$\Univ(\sllie_2)$ is a polynomial algebra, generated by the classical Casimir element~$C = (ef + h^2 + fe)/4$.
   It can be shown that the center of~$\Univ_q(\sllie_2)$ is again a polynomial algebra, now generated by the quantum Casimir element~$C_q$.
-  We refer to \cite[Proposition~2.18]{jantzen_quantum} for more details on this.
+  We refer to~\cite[Proposition~2.18]{jantzen_quantum} for more details on this.
 \end{remark}
 
 
@@ -2520,47 +2633,6 @@ for every~$\lambda$.
 
 
 
-\subsection{$\Univ_q(\sllie_2)$ inside of~$\Univ_{\hbar}(\sllie_2)$}
-\label{Uq in Uh}
-
-We consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
-\[
-  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
-\]
-which is given as an~\module{$\lpower{\kf}{\hbar}$} by
-\[
-  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
-  =
-  \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
-  \cong
-  \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
-  \cong
-  \lpower{\Univ(\sllie_2)}{\hbar} \,.
-\]
-The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get an algebra homomorphism
-\[
-  \Univ_q(\sllie_2)
-  \to
-  \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
-\]
-where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
-
-
-
-\subsection{From~$V(n)$ to~$\irred(q^n)$}
-\label{from Vn to quantum Ln}
-
-It follows that
-\[
-  \irred(q^n)
-  \cong
-  \gen{1 \tensor v_0, \dotsc, 1 \tensor v_n}_{\kf(q)}
-  \subseteq
-  \lpower{\kf}{\hbar} \tensor_{\kfhbar} V(n)
-\]
-as~\modules{$\Univ_q(\sllie_2)$}.
-
-
 
 
 \section{Deformation Theory}
@@ -2576,7 +2648,7 @@ We will in the following introduce a formal deformation~$\Univ_{\hbar}(\sllie_2)
 
 \subsection{Deformation of Algebras}
 
-The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild} and \cite{gerstenhaber_quantum}.
+The following is taken (at least in spirit) from~\cite[\S 5.2]{pieter_hochschild} and~\cite{gerstenhaber_quantum}.
 
 \begin{motivation}
   Deforming a~\algebra{$\kf$}~$A$ means -- roughly speaking -- that the multiplication on~$A$ is replaced by a perturbated multiplication~$*$, in the sense that for all~$a, b \in A$,
@@ -2613,9 +2685,13 @@ The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild
         A'_\hbar / \hbar A'_\hbar
         = A
       \]
-      is the identity, i.e.~$\varphi$ is the identity modulo~$\hbar$.
+      is the identity on~$A$, i.e.
+      \[
+        \varphi \equiv \id_A
+        \pmod{\hbar} \,.
+      \]
     \item
-      A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e.~$\power{A}{\hbar}$).
+      A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e. equivalent to the algebra of power series~$\power{A}{\hbar}$).
   \end{enumerate}
 \end{definition}
 
@@ -2663,7 +2739,7 @@ The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild
     \label{relations for quantum sl2}
     [H, E] = 2E \,,
     \quad
-    [H, F] = 2F \,,
+    [H, F] = -2F \,,
     \quad
     [E, F]
     =
@@ -2677,7 +2753,7 @@ The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild
   Let~$J$ be the closure of~$I$ in the~\adic{$\hbar$} topology.
   Then~$J$ is again a two-sided ideal in~$\power{P}{\hbar}$.
   The described deformation can be realized as the quotient~$\power{P}{\hbar} / J$.
-  We refer to \cite[Definition-Proposition~6.4.3~ff.]{guide_to_quantum_groups} for the specific details.
+  We refer to~\cite[Definition-Proposition~6.4.3~ff.]{guide_to_quantum_groups} for the specific details.
 \end{proof}
 
 \begin{definition}
@@ -2685,38 +2761,60 @@ The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild
 \end{definition}
 
 \begin{remark}
-  In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
-  \[
-    q \defined \e^{\hbar} \,,
-    \quad
-    K \defined \e^{\hbar H} \,.
-  \]
-  The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$ and one should think about the algebra~$\Univ_q(\sllie_2)$ as somewhat of a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
-  %TODO: Make this more precise: Realize U_q(sl2) as a subalgebra of C((h)) ⊗ U_h(sl_2).
+  \item
+    In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
+    \[
+      q \defined \e^{\hbar} \,,
+      \quad
+      K \defined \e^{\hbar H} \,.
+    \]
+    The elements~~$q$,~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
 
-  In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
-  \[
-    \widetilde{H}
-    =
-    \frac{K - K^{-1}}{q - q^{-1}} \,,
-  \]
-  which is of the form
-  \[
-    \widetilde{H}
-    =
-    H + \text{terms of order~$\hbar^2$} \,.
-  \]
-  We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
-  We note that
-  \[
-    q \equiv 1 \,,
-    \quad
-    K \equiv 1 \,,
-    \quad
-    \widetilde{H} \equiv H
-    \qquad
-    \pMod{\hbar}.
-  \]
+    Let us consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
+    \[
+      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
+    \]
+    which is given as an~\module{$\lpower{\kf}{\hbar}$} by
+    \[
+      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
+      =
+      \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
+      \cong
+      \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
+      \cong
+      \lpower{\Univ(\sllie_2)}{\hbar} \,.
+    \]
+    The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get from the above observation an homomorphism of~\algebras{$\kf(q)$}
+    \[
+      \Univ_q(\sllie_2)
+      \to
+      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
+    \]
+    where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
+  \item
+    In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
+    \[
+      \widetilde{H}
+      =
+      \frac{K - K^{-1}}{q - q^{-1}} \,,
+    \]
+    which is of the form
+    \[
+      \widetilde{H}
+      =
+      H + \text{terms of order~$\hbar^2$} \,.
+    \]
+    We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
+    We note that
+    \[
+      q \equiv 1 \,,
+      \quad
+      K \equiv 1 \,,
+      \quad
+      \widetilde{H} \equiv H
+      \qquad
+      \pMod{\hbar}.
+    \]
 \end{remark}
 
 \begin{definition}
@@ -2789,21 +2887,20 @@ The following is taken (at least in spirit) from \cite[\S 5.2]{pieter_hochschild
   Let~$\glie$ be a semisimple Lie algebra.
   It can be shown that
   \[
-    \HH^2( \Univ(\glie) ) = 0
+    \HH^2( \Univ(\glie) ) = 0,
   \]
-  whence all deformations of~$\Univ(\glie)$ are trivial.
-  (See \cite[Theorem~2]{gerstenhaber_quantum}.)
-  %TODO: Find better reference for vanishing of H^2(U(g)).
+  see~\cite[Theorem~2]{gerstenhaber_quantum} or~\cite[Exercise~2.8.1,~Bonus]{schedler_nca}.
+  Therefore all deformations of~$\Univ(\glie)$ (as an algebra) are trivial.
 
   It follows in particular that the every algebra deformation of~$\Univ(\sllie_2)$ is trivial.
-  An explicit equivalence between~$\Univ_{\hbar}(\sllie_2)$ and~$\power{\Univ(\sllie_2)}{\hbar}$ is constructed in \cite[Proposition~4.6.4]{guide_to_quantum_groups}.
+  An explicit equivalence between~$\Univ_{\hbar}(\sllie_2)$ and~$\power{\Univ(\sllie_2)}{\hbar}$ is constructed in~\cite[Proposition~4.6.4]{guide_to_quantum_groups}.
 \end{example}
 
 
 
 
 
-\subsection{More on Completions}
+\subsection{Background on Completions}
 
 We also want define coalgebras (and bialgebras and Hopf algebras).
 For this we need to make sense of power series in tensor products~$\power{A}{\hbar} \tensor \power{A}{\hbar}$, which does in general not make sense.
@@ -3035,13 +3132,15 @@ This problem is solved by using the \defemph{completed tensor product}.
 % TODO: Add a proof in the appendix.
 
 
+
 \subsection{Deformation of Hopf Algebras}
 
-The following is taken mostly from \cite[Chapter~6]{guide_to_quantum_groups}.
+The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
 
 \begin{definition}
   \label{topological definitions}
   \begin{enumerate}
+    \leavevmode
     \item
       A \defemph{topological Hopf algebra} consists of a complete~\module{$\kfhbar$}~$A$ together with~\linear{$\kfhbar$} maps
       \[
@@ -3280,6 +3379,15 @@ We lastly give an explanation of how the irreducible, finite-dimensional represe
         =
         \qnum{n - 2i} v_i \,.
       \]
+      It follows that
+      \[
+        \irred(q^n)
+        \cong
+        \gen{1 \tensor v_0, \dotsc, 1 \tensor v_n}_{\kf(q)}
+        \subseteq
+        \lpower{\kf}{\hbar} \tensor_{\kfhbar} V(n)
+      \]
+      as~\modules{$\Univ_q(\sllie_2)$}.
   \end{enumerate}
 \end{theorem}
 
