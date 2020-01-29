@@ -18,7 +18,7 @@
 
 
 
-\section{Recalling~$\sllie_2$-Theory}
+\section{Recalling~\texorpdfstring{$\sllie_2$}{sl2}-Theory}
 
 Let~$\kf$ be a field.
 The Lie algebra
@@ -163,7 +163,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
 
 
 
-\section{The Algebra~$\Univ_q(\sllie_2)$}
+\section{The Algebra~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 
 \begin{convention}
   In the following~$\kf$ denotes a field of characteristic zero and~$q$ is an element of~$\kf$ with~$q \neq 0, 1, -1$.
@@ -198,7 +198,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
     \item
       $q$ is not a root of unity, or that
     \item
-      $\kf$ is the field~$\Kf(q)$ over some other field~$\Kf$, with~$q$ being the indeterminate.
+      $\kf$ is the function field~$\Kf(q)$ over some other field~$\Kf$, with~$q$ being the indeterminate.
   \end{enumerate}
 \end{remark}
 
@@ -212,7 +212,7 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
     \frac{K - K^{-1}}{q - q^{-1}}
   \]
   as an additional generator, and then adjust the relations~\eqref{standard presentation}.
-  This presentation of~$\Univ_q(\sllie_2)$ does then make sense for any~$q \in \kf$, and for~$q = 1$ one has
+  This presentation of~$\Univ_q(\sllie_2)$ does then make sense for any parameter~$q \in \kf$, and for~$q = 1$ one has an isomorphism
   \[
     \Univ_1(\sllie_2)
     \cong
@@ -233,8 +233,8 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
 \end{remark}
 
 \begin{remark}
-  One might think about~$E$ and~$F$ as the usual elements of~$\sllie_2$, but~$\Univ_q(\sllie_2)$ does not contain the element~$H$.
-  We will later see that the algebra~$\Univ_q(\sllie)$ lives (up to some technical details) inside an~\algebra{$\kfhbar$}~$\Univ_{\hbar}(\sllie_2)$ that also contains~$H$, and in which
+  One might think about the algebra~$\Univ_q(\sllie_2)$ as containing the original elements~$E$,~$F$ of~$\sllie_2$, but not the element~$H$.
+  We will later see that the algebra~$\Univ_q(\sllie)$ lives (up to some technical details) inside an~\algebra{$\kfhbar$}~$\Univ_{\hbar}(\sllie_2)$ which then also contains~$H$, and in which
   \[
     q = \e^{\hbar} \,,
     \quad
@@ -262,24 +262,26 @@ We refer to \cref{appendix representation theory of sl2} for more details on the
   See \cref{proof of quantum pbw}.
 \end{proof}
 
-We refer to \cref{algebra structure of quantum sl2} for more remarks on the algebra structure of~$\Univ_q(\sllie_2)$.
+We refer to \cref{algebra structure of quantum sl2} for more information on the algebra structure of~$\Univ_q(\sllie_2)$.
 
 
 
 
 
-\section{Representation Theory of~$\Univ_q(\sllie_2)$}
+\section{Representation Theory of~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 
-We will in this section focus on the finite-dimensional representation theory of~$\Univ_q(\sllie_2)$.
+We will now focus on the finite-dimensional representation theory of~$\Univ_q(\sllie_2)$.
 
 
 
-\subsection{The Case~$q = 1$}
+\subsection{The Case~\texorpdfstring{$q = 1$}{q=1}}
 \label{representation theory of quantum U1}
 
-Every~\representation{$\sllie_2$} extends to a~\module{$\Univ_1(\sllie_1)$} by letting~$\sigma$ act by either~$1$ or~$-1$.
-The resultings~\modules{$\Univ_1(\sllie_1)$} are denoted by~$\irred(\varepsilon, n)$ for~$\varepsilon = \pm$ and~$n \in \Natural$.
-One can conclude from \cref{irreps of sl2} that every finite-dimensional~\module{$\Univ_1(\sllie_2)$} is semisimple, and that the irreducible finite-dimensional~\modules{$\Univ_1(\sllie_2)$} are given precisely given by~$\irred(\pm, n)$.
+For motivational purposes we consider fist the special case~$q = 1$.
+
+By using the above isomorphism~\eqref{isomorphism for U1} we see that every~\representation{$\sllie_2$}~$M$ extends to an~\module{$\Univ_1(\sllie_1)$} by letting~$\sigma$ act on~$M$ by either~$1$ or~$-1$.
+Let us denote the~\modules{$\Univ_1(\sllie_1)$} which result from~$M = \irred(n)$ for~$n \in \Natural$ by~$\irred(\varepsilon, n)$ for~$\varepsilon \in \{+, -\}$.
+One can conclude from \cref{irreps of sl2} that every finite-dimensional~\module{$\Univ_1(\sllie_2)$} is semisimple, and that the irreducible finite-dimensional~\modules{$\Univ_1(\sllie_2)$} are given precisely given by the modules~$\irred(\pm, n)$.
 One can depict these irreducible modules as in \cref{graphical representation of quantum irreducible representation for q = 1}.
 \begin{figure}
   \begin{center}
@@ -364,10 +366,17 @@ One can depict these irreducible modules as in \cref{graphical representation of
 \end{figure}
 We refer to \cref{representation theory of U1} for proofs of these claims.
 
-We will keep the case of~$\Univ_1(\sllie_2)$ in the back of our minds while considering the following discussion.
+We will keep the case of~$\Univ_1(\sllie_2)$ in the back of our minds throughout the following discussion of the general case of~$\Univ_q(\sllie_2)$.
+
 
 
 \subsection{Weight Space Decomposition}
+
+One of the useful tools in the representation theory of~$\sllie_2$ are weight space decompositions.
+By this we mean the decomposition of an~\representation{$\sllie_2$} into eigenspaces with respect to the action of the element~$H$ of~$\sllie_2$.
+
+We also want this tool to be available for studying the representation theory of~$\Univ_q(\sllie_2)$.
+For this we replace the role of~$H$ by that of~$K$.
 
 \begin{convention}
   In the following~$q$ is an element of~$\kf$ which is not a root of unity, unless otherwise specified.
@@ -411,29 +420,33 @@ We will keep the case of~$\Univ_1(\sllie_2)$ in the back of our minds while cons
 
 \subsection{Verma Modules and Classifications}
 
+The weight space decomposiions of finite-dimensional~\representations{$\sllie_2$} leads to the classification of irreducible finite-dimensional~\modules{$\sllie_2$} via the more general classification of irreducible highest-weight representations.
+Thanks to \cref{quantum weight decomposition} we can mirror this approach for~\modules{$\Univ_q(\sllie_2)$}.
+
 \begin{definition}
   Let~$M$ be an~\module{$\Univ_q(\sllie_2)$}.
   \begin{enumerate}
     \item
-      A weight vector~$m$ is \defemph{primitive} if it is nonzero and~$Em = 0$.
+      A weight vector~$m$ of~$M$ is \defemph{primitive} if it is nonzero and~$Em = 0$.
     \item
       The module~$M$ is of \defemph{highest weight~$\lambda$} if it is generated by a primitive weight vector of weight~$\lambda$.
   \end{enumerate}
 \end{definition}
 
 \begin{proposition}
-  Every irreducible, finite-dimensional~\module{$\Univ_q(\sllie_2)$} is a highest weight module.
+  \label{finite dimensional is highest weight}
+  Every irreducible finite-dimensional~\module{$\Univ_q(\sllie_2)$} is a highest weight module.
 \end{proposition}
 
 \begin{proof}
   The assertion follows from \cref{quantum weight decomposition}.
 \end{proof}
 
-We will classify the irreducible highest-weight representations of~$\Univ_q(\sllie_2)$ and its irreducible finite-dimensional representations.
-We mirror the corresponding classifications of~\representations{$\sllie_2$}.
+We will now classify the irreducible highest-weight representations of~$\Univ_q(\sllie_2)$ and determine which of these irreducibles are finite-dimensional.
+Thanks to \cref{finite dimensional is highest weight} this will give us a classification of the irreducible finite-dimensional~\modules{$\Univ_q(\sllie_2)$}.
 
 \begin{definition}
-  Let~$\Univ_q(\blie)$ be the subalgebra of~$\Univ_q(\sllie_2)$ generated by~$E$,~$K$,~$K^{-1}$.%
+  Let~$\Univ_q(\blie)$ be the subalgebra of~$\Univ_q(\sllie_2)$ generated by the elements~$E$,~$K$,~$K^{-1}$.%
   \footnote{
     Here~$\blie$ refers to the Lie subalgebra of~$\sllie_2$ consisting of the traceless upper triangular matrices, see \cref{appendix representation theory of sl2}.
   }
@@ -443,7 +456,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
   Let~$\lambda \in \kf^\times$.
   \begin{enumerate}
     \item
-      Let~$\kf_\lambda$ be the one-dimensional~\module{$\Univ_q(\blie)$} whose underlying vector space is given by~$\kf$, together with the action
+      Let~$\kf_\lambda$ be the one-dimensional~\module{$\Univ_q(\blie)$} whose underlying vector space is given by~$\kf$, together with the action of~$\Univ_q(\blie)$ given by
       \[
         K \cdot 1 = \lambda \,,
         \quad
@@ -459,21 +472,33 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
   \end{enumerate}
 \end{definition}
 
+In the upcoming \cref{understanding quantum verma modules} we will describe the structure of the Verma module~$\verma(\lambda)$.
+This will require us to express the occuring coefficients -- which will be rational expressions involving the highest weight~$\lambda$ and powers of~$q$ -- in an efficient and insightful way.
+For this we will first introduce some standard notation.
+
 \begin{definition}
   \label{definition of quantum integers}
-  For~$q \in \kf$ with~$q \neq 0$ the \defemph{\howmanyth{$n$} quantum integer} is
+  For~$q \in \kf$ with~$q \neq 0$ and~$n \in \Integer$ the \defemph{\howmanyth{$n$} quantum integer} is
   \[
     \qnum{n}
     \defined
-    q^{n-1} + q^{n-3} + \dotsb + q^{-n+3} + q^{-n+1} \,,
+    \begin{cases*}
+      q^{n-1} + q^{n-3} + \dotsb + q^{-n+3} + q^{-n+1}
+      &
+      if~$n \geq 0$,
+      \\
+      -( q^{n+1} + q^{n+3} + \dotsb + q^{-n-3} + q^{-n-1} )
+      &
+      if~$n \leq 0$,
+    \end{cases*}
   \]
-  and thus for~$q \neq 1, 0, -1$,
+  which can for~$q \neq 1, 0, -1$ be expressed as
   \[
     \qnum{n}
     =
     \frac{q^n - q^{-n}}{q - q^{-1}} \,.
   \]
-  The \defemph{quantum factorial} is
+  The~\defemph{\howmanyth{$n$}~quantum factorial} for~$n \in \Natural$ is given by
   \[
     \qnum{n}!
     \defined
@@ -488,7 +513,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{definition}
 
 \begin{remark}
-  For~$q = 1$ we have~$\qnum{n}[1] = n$ and~$\qnum{n}[1]! = n!$.
+  For~$q = 1$ we have~$\qnum{n}[1] = n$ for every~$n \in \Integer$ and~$\qnum{n}[1]! = n!$ for every~$n \in \Natural$.
 \end{remark}
 
 \begin{proposition}
@@ -508,7 +533,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       \[
         F m_i = m_{i+1} \,,
         \quad
-        K m_i = q^{-2i} \lambda m_i \,,
+        K m_i = \lambda q^{-2i} m_i \,,
         \quad
         E m_i = \qnum{i} \qnum{\lambda, 1-i} m_{i-1} \,.
       \]
@@ -589,7 +614,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
             \qquad
             \text{with~$i \geq n+1$.}
           \]
-          This submodule is isomorphic to~$\verma(q^{-n-2} \lambda)$.
+          This submodule is isomorphic to~$\verma(\pm q^{-n-2})$.
         \item
           If~$\lambda \neq \pm q^n$ for every~$n \in \Natural$ then the Verma module~$\verma(\lambda)$ is irreducible.
       \end{enumerate}
@@ -624,12 +649,11 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       There is a one-to-one correspondence given by
       \begin{align*}
         \kf^\times
-        &\longmapsto
+        &\longto
         \left\{
           \begin{tabular}{@{}c@{}}
-            isomorphism clases of \\
-            highest-weight irreducible \\
-            \modules{$\Univ_q(\sllie_2)$}
+            isomorphism classes of irreducible \\
+            highest-weight~\modules{$\Univ_q(\sllie_2)$}
           \end{tabular}
         \right\} \,,
         \\
@@ -642,12 +666,11 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
       The above one-to-one correspondence does therefore restrict to a one-to-one correspondence given by
       \begin{align*}
         \{ 1, -1 \} \times \Natural
-        &\longmapsto
+        &\longto
         \left\{
           \begin{tabular}{@{}c@{}}
-            isomorphism clases of \\
-            finite-dimensional irreducible \\
-            \modules{$\Univ_q(\sllie_2)$}
+            isomorphism classes of irreducible \\
+            finite-dimensional~\modules{$\Univ_q(\sllie_2)$}
           \end{tabular}
         \right\} \,,
         \\
@@ -664,10 +687,6 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
   \end{enumerate}
 \end{theorem}
 
-
-% TODO: Add a proof in the appendix.
-
-
 \begin{remark}
   \leavevmode
   \begin{enumerate}
@@ -678,7 +697,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         =
         \pm \qnum{n-i+1} \,.
       \]
-      On the rescalled basis~$m_0, \dotsc, m_n$ of~$\irred(\pm q^n)$ given by
+      On the rescaled basis~$m_0, \dotsc, m_n$ of~$\irred(\pm q^n)$ given by
       \[
         w_i
         \defined
@@ -692,7 +711,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         \quad
         F w_i = \qnum{i+1} w_{i+1} \,.
       \]
-      The action of~$E$,~$K$,~$F$ on~$\irred(\pm q^n)$ can therefore be graphically be represented as in \cref{graphical representation of irreducible quantum representation}.
+      The action of~$E$,~$K$,~$F$ on~$\irred(\pm q^n)$ can therefore be graphically depicted as in \cref{graphical representation of irreducible quantum representation}.
       \begin{figure}[t]
         \begin{center}
           \begin{tikzpicture}[
@@ -782,8 +801,8 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         \frac{K - K^{-1}}{q - q^{-1}}
       \]
       of~$\Univ_q(\sllie_2)$.
-      It acts on the weight space~$M_{\lambda q^{-2i}}$ by the scalar~$\qnum{\lambda, -2i}$.
-      For~$\lambda = \pm q^n$ this means
+      This element acts on the weight space~$M_{\lambda q^{-2i}}$ by the scalar~$\qnum{\lambda, -2i}$.
+      For~$\lambda = \pm q^n$ this scalar is given by
       \[
         \qnum{\lambda, -2i}
         =
@@ -791,15 +810,15 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
         =
         \pm \qnum{n - 2i} \,.
       \]
-      The action of~$\widetilde{H}$ on the Verma module~$\verma(\lambda)$ and irreducible modules~$\irred(\pm q^n)$ is therefore as depicted in \cref{graphical representation of quantum verma module} and \cref{graphical representation of irreducible quantum representation}.
+      The action of~$\widetilde{H}$ on the Verma module~$\verma(\lambda)$ and the irreducible modules~$\irred(\pm q^n)$ is therefore as depicted in \cref{graphical representation of quantum verma module} and \cref{graphical representation of irreducible quantum representation}.
     \item
-      We observe that for~$q = 1$ the descriptions of the irreducible~\modules{$\Univ_q(\sllie_2)$}~$\irred(\pm q^n)$ from \cref{graphical representation of irreducible quantum representation} becomes the description of the irreducible~\modules{$\Univ_1(\sllie_2)$}~$\irred(\pm, n)$ from~\cref{graphical representation of quantum irreducible representation for q = 1}.
+      We observe that for~$q = 1$ the descriptions of the irreducible~\modules{$\Univ_q(\sllie_2)$}~$\irred(\pm q^n)$ from \cref{graphical representation of irreducible quantum representation} become the description of the irreducible~\modules{$\Univ_1(\sllie_2)$}~$\irred(\pm, n)$ from~\cref{graphical representation of quantum irreducible representation for q = 1}.
   \end{enumerate}
 \end{remark}
 
 
 
-\subsection{Semisimplicity of Finite-Dimensional~$\Univ_q(\sllie_2)$-modules}
+\subsection{Semisimplicity of Finite-Dimensional~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}-modules}
 
 \begin{theorem}
   \label{finite-dimensional quantum modules are semisimple}
@@ -821,7 +840,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 
 
 
-\section{Hopf Algebra Structure on~$\Univ_q(\sllie_2)$}
+\section{Hopf Algebra Structure on~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 
 
 \begin{proposition}
@@ -849,11 +868,19 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{proposition}
 
 \begin{proof}
-  One checks that the proposed images of the algebra generators~$E$,~$F$,~$K$,~$K^{-1}$ are compatible with the defining relations of~$\Univ_q(\sllie_2)$, and that the Hopf algebra diagram commute on these algebra generators.
+  One checks that the proposed images of the algebra generators~$E$,~$K$,~$K^{-1}$,~$F$ are compatible with the defining relations of~$\Univ_q(\sllie_2)$, giving rise to well-defined algebra homomorphisms
+  \[
+    \Delta \colon \Univ_q(\sllie_2) \to \Univ_q(\sllie_2) \tensor \Univ_q(\sllie_2) \,,
+    \quad
+    \varepsilon \colon \Univ_q(\sllie_2) \to \kf \,,
+    \quad
+    S \colon \Univ_q(\sllie_2) \to \Univ_q(\sllie_2)^{\op} \,.
+  \]
+  It can then be checked on the algebra generators~$E$,~$K$,~$K^{-1}$,~$F$ that the required Hopf algebra diagrams commute.
 \end{proof}
 
 \begin{definition}
-  The Hopf algebra structure of~$\Univ_q(\sllie_2)$ is given as in \cref{hopf algebra structure on quantum sl2}.
+  The Hopf algebra structure of~$\Univ_q(\sllie_2)$ is given as described in \cref{hopf algebra structure on quantum sl2}.
 \end{definition}
 
 \begin{remark}
@@ -882,10 +909,14 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 %  \end{enumerate}
 \end{remark}
 
+The newly-introduced Hopf algebra structure on~$\Univ_q(\sllie_2)$ allows us to consider tensor products of~\modules{$\Univ_q(\sllie_2)$}.
+For the original universal enveloping algebra~$\Univ(\sllie_2)$ its Hopf algebra structure is cocommutative, from which it follows that for any two~\representations{$\sllie_2$}~$M$,~$N$ the usual flip map~$M \tensor N \to N \tensor M$ (given by~$m \tensor n \mapsto n \tensor m$) is an isomorphism of representations.
+But~$\Univ_q(\sllie_2)$ is not cocommutative anymore, so things change.
+
 \begin{lemma}
   \label{quantum weight spaces of tensor product}
   Let~$M$,~$N$ be two finite-dimensional~\modules{$\Univ_q(\sllie_2)$}.
-  Then
+  Then for every~$\lambda \in \kf^\times$,
   \[
     (M \tensor N)_\lambda
     =
@@ -904,8 +935,9 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
   \[
     M \tensor N
     \cong
-    N \tensor M \,.
+    N \tensor M
   \]
+  as~\modules{$\Univ_q(\sllie_2)$}.
 \end{corollary}
 
 \begin{proof}
@@ -913,7 +945,7 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
 \end{proof}
 
 \begin{warning}
-  For two (finite-dimensional)~\modules{$\Univ_q(\sllie_2)$}~$M$,~$N$ the flip map
+  For two (finite-dimensional)~\modules{$\Univ_q(\sllie_2)$}~$M$,~$N$ the usual flip map
   \[
     \tau
     \colon
@@ -925,32 +957,44 @@ We mirror the corresponding classifications of~\representations{$\sllie_2$}.
     \mapsto
     n \tensor m
   \]
-  is in general not~\linear{$\Univ_q(\sllie_2)$}.
+  is in general not~\linear{$\Univ_q(\sllie_2)$}, and thus not an isomorphism of~\modules{$\Univ_q(\sllie_2)$}.
 \end{warning}
 
 \begin{example}
-  Indeed, let us consider~$M = N = \irred(q)$ with basis~$m_0$,~$m_1$.
-  Then
+  Let us consider the~\modules{$\Univ_q$}~$M$,~$N$ given by~$\irred(q)$, with basis~$m_0$,~$m_1$.
+  Then on the one hand
   \[
     F \cdot (m_0 \tensor m_1)
     =
-    m_1 \tensor m_1
-    \neq
-    q m_1 \tensor m_1
+    \underbrace{ (F m_0) }_{= m_1} {} \tensor m_1
+    +
+    (K^{-1} m_0) \tensor \underbrace{(F m_1) }_{= 0}
     =
-    F \cdot (m_1 \tensor m_0) \,.
+    m_1 \tensor m_1
+  \]
+  while one the other hand
+  \[
+    F \cdot (m_1 \tensor m_0)
+    =
+    \underbrace{ (F m_1) }_{= 0} {} \tensor m_0
+    +
+    \underbrace{ (K^{-1} m_1) }_{= q m_1} {} \tensor \underbrace{ (F m_0) }_{= m_1}
+    =
+    q m_1 \tensor m_1 \,.
   \]
 \end{example}
 
-There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum clebsch gordan}.
+From the above assertions one can conclude a quantum version of the Clebsch--Gordan formula, which explains how a tensor product~$\irred(\delta q^n) \tensor \irred(\varepsilon q^m)$ decomposes into irreducible representations.
+We refer to \cref{quantum clebsch gordan} for more details.
 
 
 
-\section{Outlook: The Deformation~$\Univ_{\hbar}(\sllie_2)$}
+
+\section{Outlook: The Deformation~\texorpdfstring{$\Univ_{\hbar}(\sllie_2)$}{Uh(sl2)}}
 
 \begin{definition}
   Let~$A$ be a Hopf algebra over~$\kf$.
-  A \defemph{(formal) deformation} of a Hopf algebra~$A$ is a Hopf algebra over~$\kfhbar$ such that~$A_\hbar = \power{A}{\hbar}$ as~\modules{$\kfhbar$} and~$A_\hbar / \hbar A_\hbar = A$ as Hopf algebras over~$\kf$.
+  A \defemph{(formal) deformation}~$A$ is a Hopf algebra over~$\kfhbar$ such that~$A_\hbar = \power{A}{\hbar}$ as~\modules{$\kfhbar$} and~$A_\hbar / \hbar A_\hbar = A$ as Hopf algebras over~$\kf$.
 \end{definition}
 
 \begin{remark}
@@ -958,8 +1002,8 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
 %  \begin{enumerate}
 %    \item
       The above definition is actually wrong.
-      Instead of simply Hopf algebras over~$\kfhbar$ one needs to consider \defemph{topological Hopf algebras}.
-      This means that for the comultiplication of~$A_\hbar$ one has to replace the tensor product
+      Instead of Hopf algebras over~$\kfhbar$ one needs to consider \defemph{topological Hopf algebras} (over~$\kfhbar$).
+      This means that for the comultiplication~$\Delta_{\hbar}$ of~$A_\hbar$ one has to replace the tensor product
       \[
         A_\hbar \tensor_{\kfhbar} A_\hbar
       \]
@@ -976,7 +1020,7 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
         \power{(A \tensor A)}{\hbar}
       \]
       as~\modules{$\kfhbar$}.
-      This means that we must allow the comultiplication to take as values not only tensors, but actually power series of tensors.
+      This means that we must allow~$\Delta_{\hbar}$ to have as its values not only tensors, but actually power series of tensors.
 %    \item
 %      If~$A_{\hbar}$ is a deformation of~$A$ then the multiplication
 %      \[
@@ -1028,7 +1072,7 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
   \[
     \Univ_{\hbar}(\sllie_2)
   \]
-  that is given by
+  such that
   \begin{gather*}
     [H, E] = 2E \,,
     \quad
@@ -1062,7 +1106,7 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
   \leavevmode
   \begin{enumerate}
     \item
-      In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
+      In the deformation~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
       \[
         q \defined \e^{\hbar} \,,
         \quad
@@ -1071,7 +1115,7 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
       The elements~$q$,~$E$,~$K$,~$K^{-1}$,~$F$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
       We can thus (up to some technical details) regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
     \item
-      In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
+      The deformation~$\Univ_{\hbar}(\sllie_2)$ contains both the element~$H$ of~$\sllie_2$ and the element
       \[
         \widetilde{H}
         \defined
@@ -1079,15 +1123,15 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
         =
         \frac{K - K^{-1}}{q - q^{-1}}
         =
-        \frac{\e^{\hbar H} - \e^{-\hbar H}}{\e^{\hbar} - \e^{-\hbar}}
+        \frac{\e^{\hbar H} - \e^{-\hbar H}}{\e^{\hbar} - \e^{-\hbar}} \,,
       \]
       which is of the form
       \[
         \widetilde{H}
         =
-        H + \text{terms of order~$\hbar^2$} \,.
+        H + \text{terms of order at least~$\hbar^2$} \,.
       \]
-      We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
+      We may think about the element~$\widetilde{H}$ is a deformation of the element~$H$ (in an informal sense).
       We note that
       \[
         q \equiv 1 \,,
@@ -1102,10 +1146,10 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
 \end{remark}
 
 \begin{theorem}[{\cite[Proposition~6.4.10]{guide_to_quantum_groups}}]
-  For every natural number~$n \in \Natural$ let~$L(n)$ be the free~\module{$\kfhbar$} of rank~$n+1$ with basis~$w_0, \dotsc, w_n$.
+  For every natural number~$n \in \Natural$ let~$V(n)$ be the free~\module{$\kfhbar$} of rank~$n+1$ with basis~$w_0, \dotsc, w_n$.
   \begin{enumerate}
     \item
-      There exists a unique~\module{$\Univ_{\hbar}(\sllie_2)$} structure on~$V(n)$ such that
+      The~\module{$\kfhbar$} structure of~$V(n)$ extends uniquely to an~\module{$\Univ_{\hbar}(\sllie_2)$} structure such that
       \[
         H w_i \defined (n - 2i) w_i \,,
         \quad
@@ -1246,11 +1290,11 @@ There exists a quantum version of the Clebsch--Gordan formula, see \cref{quantum
         =
         \qnum{n - 2i} w_i \,.
       \]
-      It follows that the module~$V(n)$ becomes the irreducible representation~$\irred(q^n)$ of~$\Univ_q(\sllie_2)$.
+      It follows that the~\module{$\Univ_{\hbar}(\sllie_2)$}~$V(n)$ becomes the irreducible~\module{$\Univ_q(\sllie_2)$}~$\irred(q^n)$ by restriction (up to some technical details).
   \end{enumerate}
 \end{theorem}
 
-We refer to \cref{deformation theory} for more a more detailed account about deformations of algebras and Hopf algebras.
+We refer to \cref{deformation theory} for a more detailed account on deformations of algebras and Hopf algebras, and proper formulations of some of the above statements.
 
 
 
@@ -1267,12 +1311,18 @@ We refer to \cref{deformation theory} for more a more detailed account about def
 
 
 
-\subsection{Representation Theory of~$\sllie_2$}
+\subsection{Representation Theory of~\texorpdfstring{$\sllie_2$}{sl2}}
 \label{appendix representation theory of sl2}
 
 Let~$\blie$ denote the Lie subalgebra of~$\sllie_2$ consisting of (traceless) upper triangular matrices.
 It has the matrices~$E$,~$H$ as a basis.
-Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$H^m E^n$ with~$m, n \geq 0$, and it is a subalgebra of~$\Univ(\sllie_2)$.
+Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}
+\[
+  H^m E^n
+  \qquad
+  \text{with $m, n \geq \in \Natural$,}
+\]
+and it is a subalgebra of~$\Univ(\sllie_2)$.
 
 \subsubsection{Weight Spaces and Shifting of Weight Spaces}
 
@@ -1313,7 +1363,7 @@ Its universal enveloping algebra~$\Univ(\blie)$ has the~{\PBWbasis}~$H^m E^n$ wi
 \end{proof}
 
 \begin{lemma}
-  Let~$\kf$ be algebraically closed.
+  Suppose that~$\kf$ be algebraically closed.
   Then every finite-dimensional irreducible representation of~$\sllie_2$ is a highest-weight representation.
 \end{lemma}
 
@@ -1337,7 +1387,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
     \to
     \kf_\lambda \,,
     \quad
-    x
+    \class{x}
     \mapsto
     x.1 \,.
   \]
@@ -1366,7 +1416,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
         \defined
         F^i \tensor 1
         \qquad
-        \text{with~$i \geq 0$,} 
+        \text{with~$i \geq 0$} 
       \]
       as a basis.
       The actions of~$E$,~$H$,~$F$ on this basis are given by
@@ -1377,7 +1427,7 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
         \quad
         E.v_i = i (\lambda - i + 1) v_{i-1} \,.
       \]
-      This action can be graphically described as in \cref{graphical representation of verma module}.
+      This action can be graphically depicted as in \cref{graphical representation of verma module}.
       \begin{figure}
         \begin{center}
           \begin{tikzpicture}[
@@ -1473,18 +1523,15 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
     \item
       There is a one-to-one correspondence given by
       \begin{align*}
-        \left\{
-          \begin{tabular}{@{}l@{}}
-            irreducible highest weight\\
-            representations of~$\sllie_2$
-          \end{tabular}
-        \right\}
-        &\longleftrightarrow
-        \kf \,,
+        \kf
+        &\longto
+        \{
+          \text{irreducible highest-weight~\representations{$\sllie_2$}}
+        \} \,,
         \\
-        \irred(\lambda)
-        &\longmapsfrom
-        \lambda \,.
+        \lambda
+        &\longmapsto
+        \irred(\lambda) \,.
       \end{align*}
     \item
       The representation~$\irred(\lambda)$ is finite-dimensional if and only if~$\lambda = n \in \Natural$, in which case
@@ -1495,22 +1542,15 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
       \]
       If~$\kf$ is algebraically closed (so that every irreducible finite-dimensional~\representation{$\sllie_2$} is a highest-weight representation) then the above correspondence does therefore restrict to a one-to-one correspondence
       \begin{align*}
-        \left\{
-          \begin{tabular}{@{}l@{}}
-            irreducible finite-dimensional\\
-            representations of~$\sllie_2$
-          \end{tabular}
-        \right\}
-        &\longleftrightarrow
-        \Natural \,,
+        \Natural
+        &\longto
+        \{ 
+          \text{irreducible finite-dimensional~\representations{$\sllie_2$}}
+        \} \,,
         \\
-        L
+        n
         &\longmapsto
-        \dim(L) - 1 \,,
-        \\
-        \irred(n)
-        &\longmapsfrom
-        n \,.
+        \irred(n) \,.
       \end{align*}
   \end{enumerate}
 \end{theorem}
@@ -1523,13 +1563,13 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
     \defined
     \frac{v_i}{i!} \,.
   \]
-  The actions of~$E$ and~$F$ then become
+  The actions of~$E$,~$F$ on this basis are given by
   \[
     E.w_i = (n-i+1) w_{i-1} \,,
     \quad
     F.w_i = (i+1) w_{i+1} \,.
   \]
-  The actions of~$E$,~$H$,~$F$ on~$\irred(n)$ can now be graphically be represented as in \cref{graphical representation of irreducible representation}.
+  The actions of~$E$,~$H$,~$F$ on~$\irred(n)$ can now be graphically presented as in \cref{graphical representation of irreducible representation}.
 %  \begin{figure}
 %    \begin{center}
 %      \begin{tikzpicture}[
@@ -1585,15 +1625,20 @@ There exists for every scalar~$\lambda \in \kf$ a universal representation of hi
 \end{proof}
 
 \begin{corollary}
-  Any finite-dimensional representation of~$\sllie_2$ admits a weight space decomposition.
+  Any finite-dimensional~\representation{$\sllie_2$} admits a weight space decomposition.
   All occuring weights are integral.
   \qed
 \end{corollary}
 
-The decomposition of a finite-dimensional representation of~$\sllie_2$ into irreducible representations can be read off from its weight space decomposition.
-From this the following result can be shown.
+The decomposition of a finite-dimensional~\representation{$\sllie_2$} into irreducible representations can be read off from its weight space decomposition.
+From this the following results can be shown.
 
-\begin{proposition}[Clebsch--Gordan]
+\begin{lemma}
+  Let~$M$,~$N$ be two finite-dimensional~\representations{$\sllie_2$} with~$\dim(M_\lambda) = \dim(N_\lambda)$ for every~$\lambda \in \kf$.
+  Then~$M \cong N$.
+\end{lemma}
+
+\begin{corollary}[Clebsch--Gordan]
   Let~$n$,~$m$ be natural numbers with~$n \geq m$.
   Then
   \[
@@ -1601,13 +1646,13 @@ From this the following result can be shown.
     \cong
     \irred(n + m) \oplus \irred(n + m - 2) \oplus \dotsb \oplus \irred(n - m) \,.
   \]
-\end{proposition}
+\end{corollary}
 
 \subsubsection{The General Case of Characteristic Zero}
 
 We have above used a few times the additional assumption that~$\kf$ is algebraically closed.
 We will now explain how to get rid of this assumption.
-For this we first recall some standard results about semisimplicity of algebras.
+For this we first recall some standard results about the semisimplicity of (finite-dimensional) algebras and representations.
 
 \begin{lemma}
   \label{semisimplicity via faithful representation}
@@ -1637,17 +1682,17 @@ For this we first recall some standard results about semisimplicity of algebras.
     \item
       The Jacobson radical~$\Jac(A)$ is a nilpotent, two-sided ideal in~$A$.
     \item
-      Every nilpotent, two-sided ideal of~$A$ is contained in the Jacobson raidcal~$\Jac(A)$.
-      It is thus the unique maximal nilpotent, two-sided ideal.
+      Every nilpotent, two-sided ideal of~$A$ is contained in its Jacobson radical~$\Jac(A)$.
+      The Jacobson radical~$\Jac(A)$ is thus the unique maximal nilpotent, two-sided ideal in~$A$.
     \item
       The following conditions on~$A$ are equivalent:
       \begin{enumerate}[label = \roman*.]
         \item
           The algebra~$A$ is semisimple.
         \item
-          The Jacobson radical~$J(A)$ vanishes.
+          The Jacobson radical~$\Jac(A)$ vanishes.
         \item
-          The algebra~$A$ does not contain any nonzero nilpotent, two-sided ideal.
+          The algebra~$A$ does not contain any nonzero, nilpotent, two-sided ideal.
       \end{enumerate}
   \end{enumerate}
 \end{proposition}
@@ -1659,31 +1704,36 @@ For this we first recall some standard results about semisimplicity of algebras.
 \begin{corollary}[{\cite[Proposition~5.11]{milne_lag}}]
   \label{extension of scalars for algebras reflect semisimple}
   Let~$A$ be a finite-dimensional~\algebra{$\kf$}.
-  Let~$\Kf$ be a field extension of~$\kf$ and suppose that~$\Kf \tensor_{\kf} A$ is semisimple.
+  Let~$\Kf$ be a field extension of~$\kf$ and suppose that the~\algebra{$\Kf$}~$\Kf \tensor_{\kf} A$ is semisimple.
   Then~$A$ is semisimple.
 \end{corollary}
 
 \begin{proof}
-  We find for the Jacobson radical~$\Jac(A)$ that~$\Kf \tensor \Jac(A)$ is a nilpotent, two-sided ideal of~$\Kf \tensor A$.
-  It is thus contained in the Jacobson radical~$\Jac(\Kf \tensor A)$.
-  This Jacobson radical vanishes because~$\Kf \tensor A$ is semisimple.
-  It follows that~$\Kf \tensor \Jac(A) = 0$ and thus~$\Jac(A) = 0$.
+  We find for the Jacobson radical~$\Jac(A)$ that~$\Kf \tensor_{\kf} \Jac(A)$ is a nilpotent, two-sided ideal of~$\Kf \tensor_{\kf} A$.
+  It is thus contained in the Jacobson radical~$\Jac(\Kf \tensor_{\kf} A)$.
+  This Jacobson radical vanishes because~$\Kf \tensor_{\kf} A$ is semisimple.
+  It follows that~$\Kf \tensor_{\kf} \Jac(A) = 0$ and thus~$\Jac(A) = 0$.
 \end{proof}
 
 \begin{corollary}
   \label{extension of scalars reflects semisimplicity of fd representations}
-  Let~$A$ be an~\algebra{$\kf$} and let~$M$ be a finite-dimensional~\module{$A$}.
-  Let~$\Kf$ be a field extension of~$\kf$ and let
-  \[
-    A_{\Kf} \defined \Kf \tensor_{\kf} A \,,
-    \quad
-    M_{\Kf} \defined \Kf \tensor_{\kf} M \,.
-  \]
-  If~$M_{\Kf}$ is semisimple as an~\module{$A_{\Kf}$} then~$M$ is semisimple as an~\module{$A$}.
+  Let~$A$ be a~\algebra{$\kf$} and let~$M$ be a finite-dimensional~\module{$A$}.
+  Let~$\Kf$ be a field extension of~$\kf$ and suppose that~$\Kf \tensor_{\kf} M$ is semisimple as an~\module{$(\Kf \tensor_{\kf} A)$}.
+  Then~$M$ is semisimple as an~\module{$A$}.
 \end{corollary}
 
 \begin{proof}
-  We replace~$A$ by its image in~$\End_{\kf}(M)$ and then apply \cref{semisimplicity via faithful representation} and \cref{extension of scalars for algebras reflect semisimple}.
+  Let~$A'$ be the image of~$A$ in~$\End_{\kf}(M)$ and let~$(\Kf \tensor_{\kf} A)'$ be the image of~$\Kf \tensor_{\kf} A$ in~$\End_{\Kf}(\Kf \tensor_{\kf} M)$.
+  Under the identification~$\End_{\Kf}(\Kf \tensor_{\kf} M) \cong \Kf \tensor \End_{\kf}(M)$ we have
+  \[
+    (\Kf \tensor_{\kf} A)'
+    \cong
+    \Kf \tensor_{\kf} A' \,.
+  \]
+  That~$\Kf \tensor_{\kf} M$ is semisimple as an~\module{$(\Kf \tensor_{\kf} A)$} is equivalent to it being semisimple as an~\module{$(\Kf \tensor_{\kf} A)'$}.
+  It follows from \cref{semisimplicity via faithful representation} that~$(\Kf \tensor_{\kf} A)'$ is semisimple.
+  Thus~$A'$ is semisimple by \cref{extension of scalars reflects semisimplicity of fd representations} and the above isomorphism.
+  It follows that~$M$ is semisimple as an~\module{$A'$} and thus an an~\module{$A$}.
 \end{proof}
 
 %\begin{remark}
@@ -1730,27 +1780,27 @@ For this we first recall some standard results about semisimplicity of algebras.
     \item
       It follows from the previous assertion that every finite-dimensional irreducible~\representation{$\sllie_2(\kf)$} is a highest-weight representations.
       The classification of irreducible, finite-dimensional highest-weight representations of~$\sllie_2$ works the same over every field of characteristic zero.
-      We hence get for~$\sllie_2(\kf)$ the asserted classification.
+      From this we then get the assertion for~$\sllie_2(\kf)$.
     \qedhere
   \end{enumerate}
 \end{proof}
 
 
 
-\subsection{An Alternative Presentation for~$\Univ_q(\sllie_2)$}
+\subsection{An Alternative Presentation for~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 \label{alternative presentation for quantum sl2}
 
 Let~$q \in \kf$ and let~$U_q$ be the algebra given by the generators
 \[
   E \,,
   \quad
-  \widetilde{H} \,,
-  \quad
-  F \,,
-  \quad
   K \,,
   \quad
-  K^{-1} 
+  K^{-1}  \,,
+  \quad
+  \widetilde{H} \,,
+  \quad
+  F
 \]
 and the relations
 \begin{gather*}
@@ -1782,11 +1832,11 @@ and the relations
   \[
     \psi(E) = E \,,
     \quad
+    \psi(K) = K \,,
+    \quad
     \psi(\widetilde{H}) = \frac{K - K^{-1}}{q - q^{-1}} \,,
     \quad
     \psi(F) = F \,,
-    \quad
-    \psi(K) = K \,,
   \]
   and this homomorphism is an isomorphism.
 \end{proposition}
@@ -1808,11 +1858,11 @@ and the relations
   \[
     \varphi(E) = \sigma E \,,
     \quad
+    \varphi(K) = \sigma \,.
+    \quad
     \varphi(\widetilde{H}) = \sigma H \,,
     \quad
     \varphi(F) = F \,,
-    \quad
-    \varphi(K) = \sigma \,.
   \]
 \end{proposition}
 
@@ -1822,24 +1872,24 @@ and the relations
 
 \begin{remark}
   There also exist other, more exotic presentations of~$\Univ_q(\sllie_2)$.
-  We refer to~\cite{equitable_presentation} for an example.
+  We refer to~\cite{equitable_presentation} for a specific example.
 \end{remark}
 
 
 
 
-\subsection{Representation Theory of~$\Univ_1(\sllie_2)$}
+\subsection{Representation Theory of~\texorpdfstring{$\Univ_1(\sllie_2)$}{U1(sl2)}}
 \label{representation theory of U1}
 
 Let~$A$ denote the algebra~$\Univ(\sllie_2)[\sigma]/(\sigma^2 - 1)$.
 
-Let~$M$ be an~\representation{$\sllie_2$} and let~$\varepsilon = \pm 1$.
+Let~$M$ be an~\representation{$\sllie_2$} and let~$\varepsilon \in \{ 1, -1 \}$.
 The corresponding~\module{$\Univ(\sllie_2)$} structure on~$M$ extends to an~\module{$\Univ(\sllie_2)[\sigma]$} structure for which~$\sigma$ acts by multiplication with~$\varepsilon$, because~$\sigma$ is central in~$\Univ(\sllie_2)[\sigma]$.
-It follows from~$\varepsilon^2 = 1$ that this induces a~\module{$A$} structure on~$M$ as claimed in \cref{quantum U1}.
+It follows from the identity~$\varepsilon^2 = 1$ that this~\module{$\Univ(\sllie_2)[\sigma]$} structure descends to an~\module{$A$} structure on~$M$ as claimed in \cref{quantum U1}.
 
 If~$M$ is irreducible then the resulting~\module{$A$} is again irreducible since every~\submodule{$A$} is in particular an~\subrepresentation{$\sllie_2$}.
 It hence follows that the~\modules{$A$}~$\irred(+,n)$ and~$\irred(-,n)$ that result from the irreducible~\representation{$\sllie_2$}~$\irred(n)$ are again irreducible.
-These representations are pairwise non-isomorphic since the element~$H \sigma$ of~$A$ (which corresponds to the element~$\widetilde{H}$ of~$\Univ_1(\sllie_2)$) acts on~$\irred(+,n)$ with highest weight~$n$ and on~$\irred(-,n)$ with highest weight~$-n$.
+These representations are pairwise non-isomorphic since the element~$H \sigma$ of~$A$ (which corresponds to the element~$\widetilde{H}$ of~$\Univ_1(\sllie_2)$) acts on~$\irred(+,n)$ and~$\irred(-,n)$ with different eigenvalues.
 
 Let now~$M$ be any finite-dimensional~\module{$M$}.
 It follows from the relation~$\sigma^2 = 1$ in~$A$ that the action of~$\sigma$ on~$A$ is diagonalizable with eigenvalues~$1$ and~$-1$.
@@ -1847,12 +1897,12 @@ We thus have
 \[
   M = M_{1} \oplus M_{-1}
 \]
-with~$M_\varepsilon \defined \{ m \in M \suchthat \sigma m = \varepsilon m \}$ for~$\varepsilon = \pm 1$.
+with~$M_\varepsilon \defined \{ m \in M \suchthat \sigma m = \varepsilon m \}$ for~$\varepsilon \in \{ 1, -1 \}$.
 The action of~$\sigma$ on~$M$ is an~\module{$A$} homomorphism because~$\sigma$ is central in~$A$.
-The decomposition~$M = M_{1} \oplus M_{-1}$ is therefore one of~\modules{$A$}.
+The decomposition~$M = M_{1} \oplus M_{-1}$ is therefore a decomposition of~$M$ into~\submodules{$A$}.
 
 We may regard both~$M_1$ and~$M_{-1}$ as~\representations{$\sllie_2$} by restriction.
-We then have decompositions into finite-dimensional irreducible~\representations{$\sllie_2$} given by
+We then have decompositions of~$M_1$,~$M_{-1}$ into finite-dimensional irreducible~\representations{$\sllie_2$} given by
 \[
   M_1
   \cong
@@ -1874,10 +1924,10 @@ This shows that every finite-dimensional~\module{$A$} decomposes into a direct s
 
 
 
-\subsection{PBW Basis for~$\Univ_q(\sllie_2)$}
+\subsection{PBW-Basis for~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 \label{proof of quantum pbw}
 
-We use in the following the notation introduced in \cref{definition of quantum integers}.
+We use in the following the notations introduced in \cref{definition of quantum integers}.
 
 \begin{lemma}
   \label{generalized commutator relation for E and F}
@@ -1925,18 +1975,18 @@ We use in the following the notation introduced in \cref{definition of quantum i
 
 \begin{proof}[Proof of \cref{quantum pbw}]
   Let~$U$ be the linear subspace of~$\Univ_q(\sllie_2)$ spanned by these given monomials. 
-  It follows from \cref{technical formulas} that~$\Univ_q(\sllie_2)$ is a left ideal.
-  It contains the elements~$F^0 K^0 E^0 = 1$, whence~$U = \Univ_q(\sllie_2)$.
-  This shows that the given monomials are a vector space generating set.
+  It follows from \cref{technical formulas} that~$U$ is a left ideal in~$\Univ_q(\sllie_2)$.
+  It contains the elements~$F^0 K^0 E^0 = 1$, whence~$U$ equals~$\Univ_q(\sllie_2)$.
+  This shows that the given monomials are a vector space generating set of~$\Univ_q(\sllie_2)$.
 
-  The linear independence is shown in the usual representation-theoretic way:
+  The linear independence of the monomials~$X^l Y^m Z^n$ is shown in the usual representation-theoretic way.
   Let~$V$ be the free vector space with basis
   \[
-    X^l Y^n Z^m
+    X^l Y^m Z^n
     \qquad
     \text{with~$l, n \in \Natural$ and~$m \in \Integer$}.
   \]
-  There exists an action of~$\Univ_q(\sllie_2)$ on~$V$ by using the formulas from \cref{technical formulas}, with~$F^l K^m E^n$ replaced by~$X^l Y^n Z^m$.
+  There exists an action of~$\Univ_q(\sllie_2)$ on~$V$ by using the formulas from \cref{technical formulas}, with~$F^l K^m E^n$ replaced by~$X^l Y^m Z^n$.
   (It has to be checked that this proposed action is compatible with the defining relations of~$\Univ_q(\sllie_2)$, see~\cite[Appendix 1.5]{jantzen_quantum}.)
   The elements
   \[
@@ -1949,7 +1999,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
 
 
 
-\subsection{More on the Algebra Structure of~$\Univ_q(\sllie_2)$}
+\subsection{More on the Algebra Structure of~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 
 \label{algebra structure of quantum sl2}
 \begin{remark}
@@ -1973,7 +2023,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
         \qquad
         \text{with~$n - l = d$.}
       \]
-      This grading wan also be characterized in terms of the conjugation map
+      This grading can also be characterized in terms of the conjugation map
       \[
         \Univ_q(\sllie_2)
         \to
@@ -1983,7 +2033,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
         \mapsto
         K x K^{-1} \,.
       \]
-      The degree~$d$ part of the grading is precisely the eigenspace with eigenvalue~$q^{2d}$.
+      The degree~$d$ part of the grading is precisely the eigenspace of this conjugation map for the eigenvalue~$q^{2d}$.
   \end{enumerate}
 \end{remark}
 
@@ -2037,7 +2087,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
 \end{proposition}
 
 \begin{proof}
-  One checks that the proposed images of~$E$,~$F$,~$K^{\pm 1}$ are compatible with the defining relations of~$\Univ_q(\sllie_2)$.
+  One checks that the proposed images of~$E$,~$K$,~$K^{-1}$,~$F$ are compatible with the defining relations of~$\Univ_q(\sllie_2)$.
   See also~\cite[Lemma~1.2]{jantzen_quantum}.
 \end{proof}
 
@@ -2066,7 +2116,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
     \item
       Both~$E$ and~$F$ act nilpotently on~$M$.
     \item
-      For a sufficiently large power~$r \geq 0$ (namely such that~$F^r M = 0$) the module~$M$ is annihilated by
+      For a sufficiently large power~$r \geq 0$ (namely such that~$F^r M = 0$) the module~$M$ is annihilated by the element
       \[
         \prod_{j = -r}^r (K^2 - q^{2j}) \,.
       \]
@@ -2092,12 +2142,12 @@ We use in the following the notation introduced in \cref{definition of quantum i
     =
     \prod_{n = -r}^r ( k - q^n ) ( k + q^n ) \,.
   \]
-  The roots~$\pm q^n$ with~$n = -r, \dotsc, r$ are pairwise distinct%
+  The roots~$\pm q^n$ for~$n = -r, \dotsc, r$ are pairwise distinct%
   \footnote{
     If~$\pm q^n = \pm q^m$ then squaring both sides of this equation gives~$q^{2n} = q^{2m}$ and thus~$q^{2(n-m)} = 1$.
     It follows that~$2(n-m) = 0$ because~$q$ is not a root of unity, and thus~$n = m$.
   }
-  whence it follows that~$k$ is diagonalizable with possible eigenvalues~$\pm q^n$ for~$n = -r, \dotsc, r$.
+  whence it follows that~$k$ is diagonalizable with possible eigenvalues~$\pm q^n$ with~$n = -r, \dotsc, r$.
 \end{proof}
 
 
@@ -2114,7 +2164,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
       \[
         K^n E^m
         \qquad
-        \text{with~$n \in \Integer$ and~$m \in \Natural$}
+        \text{with~$n \in \Integer$ and~$m \in \Natural$.}
       \]
     \item
       The algebra~$\Univ_q(\blie)$ is given with respect to its generators~~$E$,~$K$,~$K^{-1}$ by the relations
@@ -2140,7 +2190,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
       \]
       for all~$n, n', m, m' \in \Natural$, and we have~$1 = K^0 E^0 \in U$.
       This shows that~$U$ is a subalgebra of~$\Univ_q(\sllie_2)$ containing~$E$,~$K$,~$K^{-1}$, and therefore containing~$\Univ_q(\blie)$.
-      This shows together that~$U = \Univ_q(\blie)$.
+      Together this shows that~$U = \Univ_q(\blie)$.
     \item
       Let~$U$ be the algebra given by generators~$E$,~$K$,~$K^{-1}$ and relations
       \[
@@ -2154,7 +2204,7 @@ We use in the following the notation introduced in \cref{definition of quantum i
         \quad
         \varphi(K) = K \,.
       \]
-      In the same way as \cref{quantum pbw} one sees that~$U$ has a PBW-basis given by the monomials
+      In the same way as for \cref{quantum pbw} one can show that the algebra~$U$ has a PBW-basis given by the monomials
       \[
         K^n E^m
         \qquad
@@ -2165,13 +2215,23 @@ We use in the following the notation introduced in \cref{definition of quantum i
   \end{enumerate}
 \end{proof}
 
-We now show an extended version of \cref{understanding quantum verma modules}
+We now show an extended version of \cref{understanding quantum verma modules}.
 
 \begin{proposition}
   Let~$\lambda \in \kf^\times$.
   \begin{enumerate}
     \item
-      We have~$\kf_\lambda \cong \Univ_q(\blie) / \gen{E, K - \lambda}$ as an~\module{$\Univ_q(\blie)$}.
+      We have~$\kf_\lambda \cong \Univ_q(\blie) / \gen{E, K - \lambda}$ as~\modules{$\Univ_q(\blie)$}.
+      Such an isomorphism is given by
+      \[
+        \Univ_q(\blie) / \gen{E, K - \lambda}
+        \to
+        \kf_\lambda \,,
+        \quad
+        \class{x}
+        \mapsto
+        x.1 \,.
+      \]
     \item
       The Verma module~$\verma(\lambda)$ has the basis
       \[
@@ -2181,17 +2241,17 @@ We now show an extended version of \cref{understanding quantum verma modules}
         \qquad
         \text{with~$i \geq 0$,}
       \]
-      and the actions of~$E$,~$K$,~$F$ on this basis is given by
+      and the actions of~$E$,~$K$,~$F$ on this basis are given by
       \[
         F m_i = m_{i+1} \,,
         \quad
-        K m_i = q^{-2i} \lambda m_i \,,
+        K m_i = \lambda q^{-2i} m_i \,,
         \quad
         E m_i = \qnum{i} \qnum{\lambda, 1-i} m_{i-1} \,.
       \]
-      This action can be graphically described as in \cref{graphical representation of quantum verma module}.
+      This action can be graphically depicted as in \cref{graphical representation of quantum verma module}.
     \item
-      The Verma module~$\verma(\lambda)$ is of highest weight~$\lambda$, and every~\module{$\Univ_q(\sllie)$} of highest weight~$\lambda$ is a quotient of~$\verma(\lambda)$.
+      The Verma module~$\verma(\lambda)$ is of highest weight~$\lambda$.
     \item
       There exists for every~\module{$\Univ_q(\sllie_2)$}~$M$ an isomorphism of vector spaces given by
       \[
@@ -2220,7 +2280,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
             \qquad
             \text{with~$i \geq n+1$.}
           \]
-          This submodule is isomorphic to~$\verma(q^{-n-2} \lambda)$.
+          This submodule is isomorphic to~$\verma(\pm q^{-n-2})$.
         \item
           If~$\lambda \neq \pm q^n$ for every~$n \in \Natural$ then the Verma module~$\verma(\lambda)$ is irreducible.
       \end{enumerate}
@@ -2231,7 +2291,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
   \item
     This follows from the PBW-basis of~$\Univ_q(\blie)$.
   \item
-    This follows from the PBW-basis of~$\Univ_q(\sllie_2)$ and induction.
+    This follows from the PBW-bases of~$\Univ_q(\sllie_2)$ and~$\Univ_q(\blie)$ and induction.
   \item
     The Verma module~$\verma(\lambda)$ is generated by the primitive weight vector~$1 \tensor 1$.
   \item
@@ -2239,6 +2299,9 @@ We now show an extended version of \cref{understanding quantum verma modules}
     \begin{align*}
       \SwapAboveDisplaySkip
       \Hom_{\Univ_q(\sllie_2)}( \verma(\lambda), M )
+      &=
+      \Hom_{\Univ_q(\sllie_2)}( \Univ_q(\sllie_2) \tensor_{\Univ_q(\blie)} \kf_{\lambda}, M )
+      \\
       &\cong
       \Hom_{\Univ_q(\blie)}( \kf_\lambda, M )
       \\
@@ -2420,13 +2483,13 @@ We now show an extended version of \cref{understanding quantum verma modules}
   \leavevmode
   \begin{enumerate}
     \item
-      It can be checked that~$C_q$ commutes with~$E$,~$F$,~$K$ by using the defining relations for~$\Univ_q(\sllie_2)$.
+      It sufficies to check that the element~$C_q$ commutes with the elements~$E$,~$F$,~$K$.
+      This follows from the defining relations for~$\Univ_q(\sllie_2)$.
     \item
       This follows from the previous assertion.
     \item
- 
-     It follows from the previous assertion and \cref{endomorphism of highest weight is ground field} that~$C_q$ acts by a scalar.
-      This scalar can be read off from the action on the primitive generator~$1 \tensor 1$.
+      It follows from the previous assertion and \cref{endomorphism of highest weight is ground field} that~$C_q$ acts by a scalar.
+      This scalar can be read off from the action on the primitive generator~$\class{1 \tensor 1}$.
       It thus sufficies to show the assertion for~$\verma(\lambda)$, where it follows from \cref{understanding quantum verma modules}.
     \item
       This follows from the previous assertion.
@@ -2447,7 +2510,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
 \begin{proof}[Proof of \cref{finite-dimensional quantum modules are semisimple} ({\cite[Theorem~2.9]{jantzen_quantum}})]
   Let~$M$ be any finite-dimensional~\module{$\Univ_q(\sllie_2)$} and let~$c$ denote the action of~$C_q$ on~$M$.
   We may assume that~$M$ is indecomposable.
-  We can consider a composition series
+  We consider a composition series
   \begin{equation}
     \label{composition series}
     0
@@ -2474,7 +2537,8 @@ We now show an extended version of \cref{understanding quantum verma modules}
   \[
     (c - c_i) M_i \subseteq M_{i-1} \,.
   \]
-  It follows that~$\prod_{i=1}^r (c - c_i)$ annihilates~$M$ and that~$c$ admits a generalized eigenspace decomposition with eigenvalues~$c_1, \dotsc, c_r$.
+  It follows that~$\prod_{i=1}^r (c - c_i)$ annihilates~$M$.
+  Therefore~$c$ admits a generalized eigenspace decomposition with eigenvalues~$c_1, \dotsc, c_r$.
   The resulting generalized eigenspaces are subrepresentations because~$c$ is a~\module{$\Univ_q(\sllie_2)$} endomorphism.
   It follows that
   \[
@@ -2491,7 +2555,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
     \lambda
   \]
   by \cref{quantum casimir acts by different scalars}.
-  It follows with the composition series~\eqref{composition series} that
+  It therefore follows from the composition series~\eqref{composition series} that
   \[
     \dim( M_\mu )
     =
@@ -2500,7 +2564,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
   for every scalar~$\mu \in \kf^\times$.
   Thus~$M$ is of highest weight~$\lambda$.
 
-  The short exact sequence
+  The short exact sequence of~\modules{$\Univ_q(\sllie_2)$}
   \begin{equation}
     \label{short exact sequence of quantum modules}
     0
@@ -2513,7 +2577,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
     \to
     0
   \end{equation}
-  restricts to a short exact sequence
+  restricts to a short exact sequence of vector spaces
   \[
     0
     \to
@@ -2525,8 +2589,8 @@ We now show an extended version of \cref{understanding quantum verma modules}
     \to
     0 \,.
   \]
-  It follows that the primitive generator~$v_0$ of~$\irred(\lambda)$ has a preimage~$m_0$ in~$M$.
-  The weight vector~$m_0$ is primitive because~$M$ isof highest weight~$\lambda$.
+  It follows that the primitive generator~$\class{1 \tensor 1}$ of~$\irred(\lambda)$ has a preimage~$m_0$ in~$M$.
+  The weight vector~$m_0$ is primitive because~$M$ is of highest weight~$\lambda$.
   It follows that there exists a homomorphism of~\modules{$\Univ_q(\sllie_2)$}
   \[
     \varphi
@@ -2540,7 +2604,7 @@ We now show an extended version of \cref{understanding quantum verma modules}
     \mapsto
     m_0 \,.
   \]
-  It follows from the finite-dimensionality of~$M$ that~$\varphi$ factors through a homomorphism
+  It further follows from the finite-dimensionality of~$M$ that~$\varphi$ factors through a homomorphism
   \[
     \psi
     \colon
@@ -2598,18 +2662,17 @@ and it follows that
   \subseteq
   M \tensor N
 \]
-It folllows with the inclusions~$M_\mu \tensor N_\kappa \subseteq (M \tensor N)_{\mu \kappa}$ that already
+It folllows with the inclusions~$M_\mu \tensor N_\kappa \subseteq (M \tensor N)_{\mu \kappa}$ that for any~$\lambda \in \kf^\times$ already
 \[
   (M \tensor N)_{\lambda}
   =
   \bigoplus_{\mu \kappa = \lambda}
-  M_\mu \tensor N_\kappa
+  M_\mu \tensor N_\kappa \,.
 \]
-for every~$\lambda$.
 
 
 
-\subsection{Clebsch--Gordan for~$\Univ_q(\sllie_2)$}
+\subsection{Clebsch–Gordan for~\texorpdfstring{$\Univ_q(\sllie_2)$}{Uq(sl2)}}
 \label{quantum clebsch gordan}
 
 \begin{proposition}
@@ -2642,269 +2705,29 @@ for every~$\lambda$.
 
 \subsection{Deformations of Algebras}
 
-We will in the following introduce a formal deformation~$\Univ_{\hbar}(\sllie_2)$ of the Hopf algebra~$\Univ(\sllie_2)$ and gain a new understanding of~$\Univ_q(\sllie_2)$.
-
-
-
-\subsection{Deformation of Algebras}
-
-The following is taken (at least in spirit) from~\cite[\S 5.2]{pieter_hochschild} and~\cite{gerstenhaber_quantum}.
-
-\begin{motivation}
-  Deforming a~\algebra{$\kf$}~$A$ means -- roughly speaking -- that the multiplication on~$A$ is replaced by a perturbated multiplication~$*$, in the sense that for all~$a, b \in A$,
-  \[
-    a * b
-    =
-    ab + \mu_1(a,b) \hbar + \mu_2(a,b) \hbar^2 + \dotsb
-  \]
-  for some bilinear terms~$\mu_i(a,b)$.
-  The limit~$\hbar \to 0$ does then give back the original algebra~$A$.
-\end{motivation}
-
-\begin{definition}
-  \label{definition of algebra deformations}
-  Let~$A$ be an~\algebra{$\kf$}.
-  \begin{enumerate}
-    \item
-      A \defemph{(formal) deformation} of~$A$ is an~\algebra{$\kfhbar$}~$A_\hbar$ whose underlying~\module{$\kfhbar$} is~$\power{A}{\hbar}$ and for which~$A_\hbar / \hbar A_\hbar = A$ as algebras.
-    \item
-      Two deformations~$A_\hbar$ and~$A'_\hbar$ of the algebra~$A$ are \defemph{equivalent} if there exists an isomorphism of~\algebras{$\kfhbar$}
-      \[
-        \varphi
-        \colon
-        A_\hbar
-        \to
-        A'_\hbar
-      \]
-      such that the induced isomorphism of~\algebras{$\kf$}
-      \[
-        A
-        =
-        A_\hbar / \hbar A_\hbar
-        \to
-        A'_\hbar / \hbar A'_\hbar
-        = A
-      \]
-      is the identity on~$A$, i.e.
-      \[
-        \varphi \equiv \id_A
-        \pmod{\hbar} \,.
-      \]
-    \item
-      A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e. equivalent to the algebra of power series~$\power{A}{\hbar}$).
-  \end{enumerate}
-\end{definition}
-
-\begin{remark}
-  Every~\bilinear{$\kfhbar$} multiplication
-  \[
-    (-) * (-)
-    \colon
-    \power{A}{\hbar} \times \power{A}{\hbar}
-    \to
-    \power{A}{\hbar} \,.
-  \]
-  satisfies the equality
-  \[
-    \Biggl( \sum_{i=0}^\infty a_i \hbar^i \Biggr)
-    *
-    \Biggl( \sum_{j=0}^\infty b_j \hbar^j \Biggr)
-    =
-    \sum_{i,j = 0}^\infty (a_i * b_j) \hbar^{i+j} \,.
-  \]
-  The multiplication~$*$ can therefore be characterized by the~\bilinear{$\kf$} maps~$\mu_i \colon A \times A \to A$ such that
-  \[
-    a * b
-    =
-    \mu_0(a, b) + \mu_1(a, b) \hbar + \mu_2(a, b) \hbar^2 + \dotsb
-  \]
-  The condition~$\power{A}{\hbar} / \hbar \power{A}{\hbar} = A$ means that~$\mu_0$ is the original multiplication on~$A$, whence
-  \[
-    a * b
-    =
-    ab + \mu_1(a, b) \hbar + \mu_2(a, b) \hbar^2 + \dotsb
-  \]
-  That the multiplication~$*$ is associative gives certain compatibility conditions on the~$\mu_1$, which we won’t discuss here.
-\end{remark}
-
-\begin{example}
-  Every~\algebra{$\kf$}~$A$ admits the \defemph{trivial deformation}~$\power{A}{\hbar}$ (i.e.\ the algebra of power series with its usual product).
-  It corresponds to the choice~$\mu_1, \mu_2, \dotsc = 0$.
-\end{example}
-
-\begin{theorem}
-  \label{existence of Uhsl2}
-  The universal enveloping algebra~$\Univ(\sllie_2)$ admits a deformation with
-  \begin{equation}
-    \label{relations for quantum sl2}
-    [H, E] = 2E \,,
-    \quad
-    [H, F] = -2F \,,
-    \quad
-    [E, F]
-    =
-    \frac{ \e^{\hbar H} - \e^{-\hbar H} }{ \e^{\hbar} - \e^{-\hbar} }
-  \end{equation}
-\end{theorem}
-
-\begin{proof}[Proof (sketch)]
-  Let~$P$ be the free algebra on the generators~$E$,~$H$,~$F$.
-  Let~$I$ be the two-sided ideal in~$\power{P}{\hbar}$ given by the relations~\eqref{relations for quantum sl2}.
-  Let~$J$ be the closure of~$I$ in the~\adic{$\hbar$} topology.
-  Then~$J$ is again a two-sided ideal in~$\power{P}{\hbar}$.
-  The described deformation can be realized as the quotient~$\power{P}{\hbar} / J$.
-  We refer to~\cite[Definition-Proposition~6.4.3~ff.]{guide_to_quantum_groups} for the specific details.
-\end{proof}
-
-\begin{definition}
-  The deformation of~$\Univ(\sllie_2)$ from \cref{existence of Uhsl2} is denoted by~$\Univ_{\hbar}(\sllie_2)$.
-\end{definition}
-
-\begin{remark}
-  \item
-    In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
-    \[
-      q \defined \e^{\hbar} \,,
-      \quad
-      K \defined \e^{\hbar H} \,.
-    \]
-    The elements~~$q$,~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$.
-
-    Let us consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
-    \[
-      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
-    \]
-    which is given as an~\module{$\lpower{\kf}{\hbar}$} by
-    \[
-      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
-      =
-      \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
-      \cong
-      \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
-      \cong
-      \lpower{\Univ(\sllie_2)}{\hbar} \,.
-    \]
-    The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get from the above observation an homomorphism of~\algebras{$\kf(q)$}
-    \[
-      \Univ_q(\sllie_2)
-      \to
-      \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
-    \]
-    where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
-  \item
-    In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
-    \[
-      \widetilde{H}
-      =
-      \frac{K - K^{-1}}{q - q^{-1}} \,,
-    \]
-    which is of the form
-    \[
-      \widetilde{H}
-      =
-      H + \text{terms of order~$\hbar^2$} \,.
-    \]
-    We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
-    We note that
-    \[
-      q \equiv 1 \,,
-      \quad
-      K \equiv 1 \,,
-      \quad
-      \widetilde{H} \equiv H
-      \qquad
-      \pMod{\hbar}.
-    \]
-\end{remark}
-
-\begin{definition}
-  The deformation of~$\Univ(\sllie_2)$ from \cref{existence of Uhsl2} is denoted by~$\Univ_{\hbar}(\sllie_2)$.
-\end{definition}
-
-\begin{remark}
-  In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
-  \[
-    q \defined \e^{\hbar} \,,
-    \quad
-    K \defined \e^{\hbar H} \,.
-  \]
-  The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$ and one should think about the algebra~$\Univ_q(\sllie_2)$ as somewhat of a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
-  %TODO: Make this more precise: Realize U_q(sl2) as a subalgebra of C((h)) ⊗ U_h(sl_2).
-
-  In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
-  \[
-    \widetilde{H}
-    =
-    \frac{K - K^{-1}}{q - q^{-1}} \,,
-  \]
-  which is of the form
-  \[
-    \widetilde{H}
-    =
-    H + \text{terms of order~$\hbar^2$} \,.
-  \]
-  We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
-  We note that
-  \[
-    q \equiv 1 \,,
-    \quad
-    K \equiv 1 \,,
-    \quad
-    \widetilde{H} \equiv H
-    \qquad
-    \pMod{\hbar}.
-  \]
-\end{remark}
-
-\begin{remark}
-  One can study the deformation theory of an~\algebra{$\kf$} via homological algebra:
-  The \defemph{Hochschild cochain complex} of~$A$ is given by
-  \[
-    \CHoch^n(A)
-    \defined
-    \Hom_{\kf}(A^{\tensor n}, A)
-  \]
-  together with certain differentials.
-  The cohomology of this chain complex is the \defemph{Hochschild cohomology} of~$A$, which is denoted by
-  \[
-    \HH^n(A)
-    \defined
-    \Homology^n\bigl( \CHoch^\bullet \bigr) \,.
-  \]
-  One of the connections between deformation theory and Hochschild cohomology is that in the case of
-  \[
-    \HH^2(A) = 0
-  \]
-  every deformation of~$A$ is trivial.
-\end{remark}
-
-\begin{warning}
-  Let~$A_\hbar$ be a deformation of an~\algebra{$\kf$}~$A$ with~$\HH^2(A) = 0$.
-  The above criterion shows that~$A_\hbar$ is equivalent to~$\power{A}{\hbar}$, but it does not provide an explicit isomorphism.
-\end{warning}
-
-\begin{example}
-  Let~$\glie$ be a semisimple Lie algebra.
-  It can be shown that
-  \[
-    \HH^2( \Univ(\glie) ) = 0,
-  \]
-  see~\cite[Theorem~2]{gerstenhaber_quantum} or~\cite[Exercise~2.8.1,~Bonus]{schedler_nca}.
-  Therefore all deformations of~$\Univ(\glie)$ (as an algebra) are trivial.
-
-  It follows in particular that the every algebra deformation of~$\Univ(\sllie_2)$ is trivial.
-  An explicit equivalence between~$\Univ_{\hbar}(\sllie_2)$ and~$\power{\Univ(\sllie_2)}{\hbar}$ is constructed in~\cite[Proposition~4.6.4]{guide_to_quantum_groups}.
-\end{example}
-
-
+We will in the following introduce a formal deformation~$\Univ_{\hbar}(\sllie_2)$ of the Hopf algebra~$\Univ(\sllie_2)$ and gain a new way of understanding~$\Univ_q(\sllie_2)$.
 
 
 
 \subsection{Background on Completions}
 
-We also want define coalgebras (and bialgebras and Hopf algebras).
-For this we need to make sense of power series in tensor products~$\power{A}{\hbar} \tensor \power{A}{\hbar}$, which does in general not make sense.
-This problem is solved by using the \defemph{completed tensor product}.
+
+\begin{definition}
+  An~\module{$\kfhbar$}~$M$ is \defemph{complete} if for every sequence~$m_0, m_1, \dotsc$ of elements~$m_n$ of~$M$ with  
+  \[
+    m_{n+1} \equiv m_n
+    \pmod{\hbar^{n+1}}
+    \qquad
+    \text{for every~$n \geq 0$}
+  \]
+  there exists a unique element~$m$ of~$M$ with
+  \[
+    m \equiv m_n
+    \pmod{\hbar^{n+1}}
+    \qquad
+    \text{for every~$n \geq 0$.}
+  \]
+\end{definition}
 
 \begin{definition}
   Let~$M$ be an~\module{$\kfhbar$}.
@@ -2927,58 +2750,59 @@ This problem is solved by using the \defemph{completed tensor product}.
       \]
     \item
       The \defemph{canonical homomorphism}~$M \to \widehat{M}$ is given by~$m \mapsto (\overline{m}, \overline{m}, \dotsc)$.
-    \item    
-      A~\module{$\kfhbar$}~$M$ is \defemph{complete} if the canonical homomorphism~$M \to \widehat{M}$ is an isomorphism.
   \end{enumerate}
 \end{definition}
 
-\begin{remark}
-  \leavevmode
+\begin{proposition}
+  Let~$M$ be an~\module{$\kfhbar$}.
   \begin{enumerate}
     \item
-      More explicitely, an~\module{$\kfhbar$}~$M$ is complete if and only if there exists for every sequence~$m_0, m_1, \dotsc$ of elements~$m_n \in M$ with
-      \begin{alignat*}{2}
-        m_{n+1} &\equiv m_n
-        \pMod{\hbar^{n+1}}
-        &
-        \qquad
-        &\text{for every~$n \geq 0$}
-      \intertext{a unique element~$m \in M$ with}
-        m &\equiv m_n
-        \pMod{\hbar^{n+1}}
-        &
-        \qquad
-        &\text{for every~$n \geq 0$.}
-      \end{alignat*}
+      The completion~$\widehat{M}$ is complete.
     \item
-      Let~$M$ be a complete~\module{$\kfhbar$}
-      Every sequence~$(m_i)_{i \geq 0}$ of elements~$m_i \in M$ defines a sequence~$(s_n)_{n \geq 0}$ of partial sums
-      \[
-        s_n
-        \defined
-        \sum_{i=0}^n \hbar^i m_i \,.
-      \]
-      for every~$n \geq 0$.
-      By the completeness of~$M$ there exists a unique element~$\sum_{i=0}^\infty \hbar^i m_i$ of~$M$ with
-      \[
-        \sum_{i=0}^\infty \hbar^i m_i
-        \equiv
-        \sum_{i=0}^n \hbar^i m_i
-        \pmod{\hbar^{n+1}}
-        \qquad
-        \text{for every~$n \geq 0$.}
-      \]
+      The module~$M$ is complete if and only if the canonical homomorphism~$M \to \widehat{M}$ is an isomorphism.
   \end{enumerate}
+\end{proposition}
+
+\begin{remark}
+  Let~$M$ be a complete~\module{$\kfhbar$}
+  Every sequence~$(m_i)_{i \geq 0}$ of elements~$m_i \in M$ defines a sequence~$(s_n)_{n \geq 0}$ of partial sums
+  \[
+    s_n
+    \defined
+    \sum_{i=0}^n \hbar^i m_i \,.
+  \]
+  for every~$n \geq 0$.
+  These partial sums satisfy the relation
+  \[
+    s_{n+1} \equiv s_n
+    \pmod{\hbar^{n+1}}
+    \qquad
+    \text{for every~$n \geq 0$} \,.
+  \]
+  There hence exists by the completeness of~$M$ a unique element~$\sum_{i=0}^\infty \hbar^i m_i$ of~$M$ with
+  \[
+    \sum_{i=0}^\infty \hbar^i m_i
+    \equiv
+    \sum_{i=0}^n \hbar^i m_i
+    \pmod{\hbar^{n+1}}
+    \qquad
+    \text{for every~$n \geq 0$.}
+  \]
 \end{remark}
 
 \begin{example}
   \leavevmode
   \begin{enumerate}
     \item
-      Every finite-dimensional~\module{$\kfhbar$}~$M$ is complete since~$\hbar^n M = 0$ for some sufficiently large power~$n$.
+      Every finite-dimensional~\module{$\kfhbar$}~$M$ is complete since~$\hbar^{n+1} M = 0$ for some sufficiently large power~$n$.%
+      \footnote{
+        Indeed, it follows from the finite-dimensionality of~$M$ that the annihilator of~$M$ is a nonzero ideal in~$\kfhbar$.
+        It is of the form~$\genideal{\hbar^n}$ for some~$n \geq 0$, because every ideal in~$\kfhbar$ is of the form.
+        Thus~$\hbar^n M = 0$.
+      }
     \item
-      For every~\vectorspace{$\kf$} the resulting~\module{$\kfhbar$}~$\power{V}{\hbar}$ is complete.
-      For every sequence of elements~$v_0, v_1, \dotsc \in V$ we have
+      For every~\vectorspace{$\kf$}~$V$ the resulting~\module{$\kfhbar$}~$\power{V}{\hbar}$ is complete.
+      For every sequence~$v_0, v_1, \dotsc$ of elements~$v_i \in V$ we have
       \[
         \sum_{i=0}^\infty \hbar^i v_i
         =
@@ -2988,10 +2812,11 @@ This problem is solved by using the \defemph{completed tensor product}.
 \end{example}
 
 \begin{proposition}
+  \label{properties of completions}
   Let~$M$,~$N$ be two~\modules{$\kfhbar$}.
   \begin{enumerate}
     \item
-      For every homomorphism of~\module{$\kfhbar$}~$f \colon M \to N$ there exists a unique module homomorphism~$\widehat{f} \colon \widehat{M} \to \widehat{N}$ that makes the following square diagram commute:
+      For every homomorphism of~\modules{$\kfhbar$}~$f \colon M \to N$ there exists a unique module homomorphism~$\widehat{f} \colon \widehat{M} \to \widehat{N}$ that makes the following square diagram commute.
       \[
         \begin{tikzcd}
           \widehat{M}
@@ -3029,7 +2854,7 @@ This problem is solved by using the \defemph{completed tensor product}.
         =
         \sum_{i=0}^\infty \hbar^i f(m_i)
       \]
-      for every sequence of elements~$m_0, m_1, \dotsc, \in M$.
+      for every sequence~$m_0, m_1, \dotsc$ of elements~$m_n \in M$.
     \item
       If~$N$ is complete then every homomorphism~$M \to N$ extends uniquely to a homomorphism~$\widehat{M} \to N$.
       \[
@@ -3047,7 +2872,7 @@ This problem is solved by using the \defemph{completed tensor product}.
         \end{tikzcd}
       \]
     \item
-      If~$V$ is any~\vectorspace{$\kf$} and~$N$ is complete then every~\linear{$\kf$} map~$f \colon V \to N$ extends uniquely to a~\linear{$\kfhbar$} linear map~$f' \colon \power{V}{\hbar} \to N$.
+      If~$V$ is any~\vectorspace{$\kf$} and~$N$ is complete then every~\linear{$\kf$} map~$f \colon V \to N$ extends uniquely to a~\linear{$\kfhbar$} linear map~$\power{V}{\hbar} \to N$.
       \[
         \begin{tikzcd}
           \power{V}{\hbar}
@@ -3078,21 +2903,56 @@ This problem is solved by using the \defemph{completed tensor product}.
   \end{enumerate}
 \end{proposition}
 
-% TODO: Add a proof.
-
-\begin{remark}
+\begin{remark}[The~\adic{$\hbar$} topology]
   Let~$M$ be a~\module{$\kfhbar$}.
-  There exists a unique topology on~$M$ for which a basis is given by the sets
-  \[
-    m + \hbar^{n+1} M
-  \]
-  with~$m \in M$ and~$n \geq 0$.
-  This topology is the~\defemph{\adic{$\hbar$} topology} on~$M$.
-  It makes~$\kfhbar$ into a topological ring and every~\module{$\kfhbar$} into a topological~\module{$\kfhbar$}.
-  The completion~$\widehat{M}$ is then the usual topological completion of~$M$.
-\end{remark}
+  \begin{enumerate}
+    \item
+      There exists a unique topology on~$M$ for which a basis is given by the sets
+      \[
+        m + \hbar^{n+1} M
+        \qquad
+        \text{with~$m \in M$ and~$n \geq 0$.}
+      \]
+      This topology is the~\defemph{\adic{$\hbar$} topology} on~$M$.
+      It makes~$\kfhbar$ into a topological ring and every~\module{$\kfhbar$} into a topological~\module{$\kfhbar$}.
+    \item
+      The~\adic{$\hbar$} topology on~$M$ is generated by a semimetric~$d_{\hbar}$ that is given by
+      \[
+        d_{\hbar}(m, m')
+        \defined
+        \inf
+        {}
+        \biggl\{
+          \frac{1}{n}
+        \suchthat[\bigg]
+          n \geq 1,
+          m \equiv m' \pMod{\hbar^{n+1}}
+        \biggr\} \,.
+      \]
+      The semimetric~$d_{\hbar}$ is already an ultra-semimetric.
+      More explicitely, it satisfies for any three elements~$m, m', m'' \in M$ the inequality
+      \[
+        d_{\hbar}(m, m'')
+        \leq
+        \max( d_{\hbar}(m, m'), d_{\hbar}(m', m'') ) \,.
+      \]
+      This is a strengthening of the usual triangle inequality.
+    \item 
+      The module~$M$ is complete if and only if it is complete with respect to the semimetric~$d_{\hbar}$, i.e. if and only if for every Cauchy-sequence in~$M$ has a unique limit.
+      This entails that the semimetric~$d_{\hbar}$ is actually a metric (by the uniqueness of these limits).
 
-% TODO: Explain the topological aspects of completion more.
+      The completion~$\widehat{M}$ together with the canonical homomorphism~$M \to \widehat{M}$ is a completion of~$M$ in the usual topological sense.
+    \item
+      The~\adic{$\hbar$} topology on~$M$ is Hausdorff if and only if
+      \[
+        \bigcap_{n \geq 0} \hbar^{n+1} M
+        =
+        \{ 0 \} \,.
+      \]
+      This is in particular the case if~$M$ is complete.
+      This can be seen topologically, since~$d_{\hbar}$ is then a metric, and algebraically, by considering the explicit description of the comletion~$\widehat{M} \cong M$.
+  \end{enumerate}
+\end{remark}
 
 \begin{definition}
   Let~$M$,~$N$ be two~\modules{$\kfhbar$}.
@@ -3129,7 +2989,266 @@ This problem is solved by using the \defemph{completed tensor product}.
   \]
 \end{proposition}
 
-% TODO: Add a proof in the appendix.
+
+
+\subsection{Deformation of Algebras}
+
+The following is taken (at least in spirit) from~\cite[\S 5.2]{pieter_hochschild} and~\cite{gerstenhaber_quantum}.
+
+\begin{motivation}
+  Deforming a~\algebra{$\kf$}~$A$ means -- roughly speaking -- that the multiplication on~$A$ is replaced by a perturbated multiplication~$*$, in the sense that for all~$a, b \in A$,
+  \[
+    a * b
+    =
+    ab + \mu_1(a,b) \hbar + \mu_2(a,b) \hbar^2 + \dotsb
+  \]
+  for some bilinear terms~$\mu_i(a,b)$.
+  The limit~$\hbar \to 0$ does then give back the original algebra~$A$.
+\end{motivation}
+
+\begin{definition}
+  \label{definition of algebra deformations}
+  Let~$A$ be an~\algebra{$\kf$}.
+  \begin{enumerate}
+    \item
+      A \defemph{(formal) deformation} of~$A$ is an~\algebra{$\kfhbar$}~$A_\hbar$ whose underlying~\module{$\kfhbar$} is~$\power{A}{\hbar}$ and for which~$A_\hbar / \hbar A_\hbar = A$ as algebras.
+    \item
+      Two deformations~$A_\hbar$,~$A'_\hbar$ of~$A$ are \defemph{equivalent} if there exists an isomorphism of~\algebras{$\kfhbar$}
+      \[
+        \varphi
+        \colon
+        A_\hbar
+        \to
+        A'_\hbar
+      \]
+      such that the induced isomorphism of~\algebras{$\kf$}
+      \[
+        A
+        =
+        A_\hbar / \hbar A_\hbar
+        \to
+        A'_\hbar / \hbar A'_\hbar
+        = A
+      \]
+      is the identity of~$A$.
+      In other words, the isomorphism~$\varphi$ is the identity of~$A$ modulo~$\hbar$.
+  \end{enumerate}
+\end{definition}
+
+\begin{remark}
+  Every~\bilinear{$\kfhbar$} multiplication
+  \[
+    (-) * (-)
+    \colon
+    \power{A}{\hbar} \times \power{A}{\hbar}
+    \to
+    \power{A}{\hbar} \,.
+  \]
+  satisfies the equality
+  \[
+    \Biggl( \sum_{i=0}^\infty a_i \hbar^i \Biggr)
+    *
+    \Biggl( \sum_{j=0}^\infty b_j \hbar^j \Biggr)
+    =
+    \sum_{i,j = 0}^\infty (a_i * b_j) \hbar^{i+j} \,.
+  \]
+  The multiplication~$*$ can therefore be characterized by the~\bilinear{$\kf$} maps~$\mu_i \colon A \times A \to A$ such that
+  \[
+    a * b
+    =
+    \mu_0(a, b) + \mu_1(a, b) \hbar + \mu_2(a, b) \hbar^2 + \dotsb
+  \]
+  The condition~$\power{A}{\hbar} / \hbar \power{A}{\hbar} = A$ means that~$\mu_0$ is the original multiplication on~$A$, whence
+  \[
+    a * b
+    =
+    ab + \mu_1(a, b) \hbar + \mu_2(a, b) \hbar^2 + \dotsb
+  \]
+  That the multiplication~$*$ is associative gives certain compatibility conditions on the~$\mu_i$, which we won’t discuss here.
+\end{remark}
+
+\begin{example}
+  Every~\algebra{$\kf$}~$A$ admits the \defemph{trivial deformation}~$\power{A}{\hbar}$ (i.e.\ the algebra of power series with its usual product).
+  It corresponds to the choice~$\mu_1, \mu_2, \dotsc = 0$.
+
+  A deformation of~$A$ \defemph{trivial} if it is equivalent to the trivial deformation (i.e. equivalent to the algebra of power series~$\power{A}{\hbar}$).
+\end{example}
+
+\begin{theorem}
+  \label{existence of Uhsl2}
+  The universal enveloping algebra~$\Univ(\sllie_2)$ admits a deformation such that 
+  \begin{equation}
+    \label{relations for quantum sl2}
+    [H, E] = 2E \,,
+    \quad
+    [H, F] = -2F \,,
+    \quad
+    [E, F]
+    =
+    \frac{ \e^{\hbar H} - \e^{-\hbar H} }{ \e^{\hbar} - \e^{-\hbar} } \,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}[Proof (sketch)]
+  Let~$P$ be the free~\algebra{$\kf$} on the generators~$E$,~$H$,~$F$.
+  Let~$I$ be the two-sided ideal in~$\power{P}{\hbar}$ given by the relations~\eqref{relations for quantum sl2}.
+  Let~$J$ be the closure of~$I$ in the~\adic{$\hbar$} topology of~$\power{P}{\hbar}$.
+  Then~$J$ is again a two-sided ideal in~$\power{P}{\hbar}$.
+  The described deformation can be realized as the quotient~$\power{P}{\hbar} / J$.
+  We refer to~\cite[Definition-Proposition~6.4.3~ff.]{guide_to_quantum_groups} for the specific details.
+\end{proof}
+
+\begin{definition}
+  The deformation of~$\Univ(\sllie_2)$ from \cref{existence of Uhsl2} is denoted by~$\Univ_{\hbar}(\sllie_2)$.
+\end{definition}
+
+\begin{remark}
+  \begin{enumerate}
+    \item
+      In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
+      \[
+        q \defined \e^{\hbar} \,,
+        \quad
+        K \defined \e^{\hbar H} \,.
+      \]
+      The elements~~$q$,~$E$,~$K$,~$K^{-1}$,~$F$ satisfy the defining relations of~$\Univ_q(\sllie_2)$, and we want to regard~$\Univ_q(\sllie_2)$ as a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
+
+      We run into a small technical problem.
+      The algebra~$\Univ_q(\sllie_2)$ needs to be defined over a field which contains the element~$q$.
+      But the algebra~$\Univ_{\hbar}(\sllie_2)$ is defined over~$\kfhbar$, and this ring does not contain any field containing~$q$.
+      To fix this problem we extend~$\Univ_{\hbar}(\sllie_2)$ to an~\algebra{$\lpower{\kf}{\hbar}$} and then define~$\Univ_q(\sllie_2)$ over the subfield~$\kf(q)$ of~$\lpower{\kf}{\hbar}$.
+
+      So let us consider the field of Laurent polynomials~$\lpower{\kf}{\hbar}$ and the extension of scalars
+      \[
+        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2) \,,
+      \]
+      which is given as an~\module{$\lpower{\kf}{\hbar}$} by
+      \[
+        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ_{\hbar}(\sllie_2)
+        =
+        \kfhbar[\hbar^{-1}] \tensor_{\kfhbar} \power{\Univ(\sllie_2)}{\hbar}
+        \cong
+        \power{\Univ(\sllie_2)}{\hbar}[\hbar^{-1}]
+        \cong
+        \lpower{\Univ(\sllie_2)}{\hbar} \,.
+      \]
+      The field~$\lpower{\kf}{\hbar}$ contains the subfield~$\kf(q)$, and we get from the above observation an homomorphism of~\algebras{$\kf(q)$}
+      \[
+        \Univ_q(\sllie_2)
+        \to
+        \lpower{\kf}{\hbar} \tensor_{\kfhbar} \Univ(\sllie_2)
+      \]
+      where~$\Univ_q(\sllie_2)$ is defined over~$\kf(q)$.
+    \item
+      In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
+      \[
+        \widetilde{H}
+        =
+        \frac{K - K^{-1}}{q - q^{-1}} \,,
+      \]
+      which is of the form
+      \[
+        \widetilde{H}
+        =
+        H + \text{terms of order at least~$\hbar^2$} \,.
+      \]
+      We may think about the element~$\widetilde{H}$ is a deformation of the original element~$H$ (in an informal sense).
+      We note that
+      \[
+        q \equiv 1 \,,
+        \quad
+        K \equiv 1 \,,
+        \quad
+        \widetilde{H} \equiv H
+        \qquad
+        \pMod{\hbar}.
+      \]
+  \end{enumerate}
+\end{remark}
+
+\begin{definition}
+  The deformation of~$\Univ(\sllie_2)$ from \cref{existence of Uhsl2} is denoted by~$\Univ_{\hbar}(\sllie_2)$.
+\end{definition}
+
+\begin{remark}
+  In the algebra~$\Univ_{\hbar}(\sllie_2)$ we can consider the well-defined elements
+  \[
+    q \defined \e^{\hbar} \,,
+    \quad
+    K \defined \e^{\hbar H} \,.
+  \]
+  The elements~$E$,~$F$,~$K$,~$K^{-1}$ satisfy the defining relations of~$\Univ_q(\sllie_2)$ and one should think about the algebra~$\Univ_q(\sllie_2)$ as somewhat of a subalgebra of~$\Univ_{\hbar}(\sllie_2)$.
+
+  In~$\Univ_{\hbar}(\sllie_2)$ we have both the element~$H$ and the element
+  \[
+    \widetilde{H}
+    =
+    \frac{K - K^{-1}}{q - q^{-1}} \,,
+  \]
+  which is of the form
+  \[
+    \widetilde{H}
+    =
+    H + \text{terms of order~$\hbar^2$} \,.
+  \]
+  We may think about~$\widetilde{H}$ is a deformation of~$H$ (in an informal sense).
+  We note that
+  \[
+    q \equiv 1 \,,
+    \quad
+    K \equiv 1 \,,
+    \quad
+    \widetilde{H} \equiv H
+    \qquad
+    \pMod{\hbar}.
+  \]
+\end{remark}
+
+\begin{remark}
+  One can study the deformation theory of an~\algebra{$\kf$} via homological algebra.
+  The \defemph{Hochschild cochain complex} of~$A$ is given by
+  \[
+    \CHoch^n(A)
+    \defined
+    \Hom_{\kf}(A^{\tensor n}, A)
+  \]
+  together with certain differentials.
+  The cohomology of this chain complex is the \defemph{Hochschild cohomology} of~$A$, which is denoted by
+  \[
+    \HH^n(A)
+    \defined
+    \Homology^n\bigl( \CHoch^\bullet \bigr) \,.
+  \]
+  One of the connections between deformation theory and Hochschild cohomology is that in the case of
+  \[
+    \HH^2(A) = 0
+  \]
+  every deformation of~$A$ is trivial.
+\end{remark}
+
+\begin{warning}
+  Let~$A$ be a~\algebra{$\kf$} with~$\HH^2(A) = 0$, and let~$A_\hbar$ be a deformation of~$A$.
+  The above criterion shows that~$A_\hbar$ is equivalent to~$\power{A}{\hbar}$, but it does not provide an explicit isomorphism.
+\end{warning}
+
+\begin{example}
+  \leavevmode
+  \begin{enumerate}
+    \item
+      Let~$\glie$ be a semisimple Lie algebra over a field~$\kf$ of characteristic zero.
+      It can be shown that
+      \[
+        \HH^2( \Univ(\glie) ) = 0 \,,
+      \]
+      see~\cite[Theorem~2]{gerstenhaber_quantum} or~\cite[Exercise~2.8.1,~Bonus]{schedler_nca}.
+      Therefore all deformations of~$\Univ(\glie)$ (as an algebra) are trivial.
+    \item
+      It follows in particular that every algebra deformation of~$\Univ(\sllie_2)$ is trivial.
+      An explicit equivalence between~$\Univ_{\hbar}(\sllie_2)$ and~$\power{\Univ(\sllie_2)}{\hbar}$ is constructed in~\cite[Proposition~4.6.4]{guide_to_quantum_groups}.
+  \end{enumerate}
+\end{example}
+
+
 
 
 
@@ -3156,7 +3275,7 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
       \]
       such that the usual Hopf algebra diagrams commute.
     \item
-      The terms \defemph{topological algebra},~\defemph{topological coalgebra} and~\defemph{topological bialgebra} are defined analogous to topological Hopf algebras.
+      The terms \defemph{topological algebra},~\defemph{topological coalgebra} and~\defemph{topological bialgebra} are defined in the same way.
   \end{enumerate}
 \end{definition}
 
@@ -3164,18 +3283,18 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
   \leavevmode
   \begin{enumerate}
     \item
-      A topological Hopf algebra~$A$ is generally not an actual Hopf algebra, since the comultiplication
+      A topological coalgebra~$C$ is generally not an actual Hopf algebra, since the comultiplication
       \[
         \Delta
         \colon
-        A
+        C
         \to
-        A \ctensor A
+        C \ctensor C
       \]
-      does in general not restrict to a map~$A \to A \tensor A$.
+      does in general not restrict to a map~$C \to C \tensor C$.
+      This problem is inherited by topological bialgebras and topological Hopf algebras.
     \item
-      If~$A$ is a topological Hopf algebra then~$A / \hbar A$ becomes an Hopf algebra over~$\kf$.
-      We note for this that
+      If~$A$ is a topological Hopf algebra then~$A / \hbar A$ becomes an Hopf algebra over~$\kf$ because
       \[
         (A \ctensor A) / \hbar (A \ctensor A)
         \cong
@@ -3187,7 +3306,7 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
 \end{remark}
 
 \begin{remark}
-  A topological algebra in the sense of \cref{topological definitions} is precisely the same as an~\algebra{$\kfhbar$} which is complete as an~\module{$\kfhbar$}.
+  A topological algebra in the sense of \cref{topological definitions} is precisely the same as an~\algebra{$\kfhbar$} that is complete as an~\module{$\kfhbar$}.
 
   Indeed, suppose first that~$(A, m, u)$ is a topological algebra.
   Then the multiplication
@@ -3219,8 +3338,7 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
     \to
     A
   \]
-  extends by the completeness of~$A$ uniquely to a~\linear{$\kfhbar$} map
-  % TODO: add a reference for this extension
+  extends by \cref{properties of completions} and the completeness of~$A$ uniquely to a~\linear{$\kfhbar$} map
   \[
     m
     \colon
@@ -3228,8 +3346,12 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
     \to
     A \,.
   \]
-  Then~$(A, m, u)$ is a topological algebra (by the denseness of~$A \tensor A$ in~$A \ctensor A$, etc.).
-  % TODO: properly explain and reference this denseness.
+  Then~$(A, m, u)$ is a topological algebra.%
+  \footnote{
+    For the commutativity of the coassociativity diagram one needs to check that two maps~$A \ctensor A \ctensor A \to A$ coincide.
+    It follows from the completeness of~$A$ and the denseness of~$A \tensor A \tensor A$ in~$A \ctensor A \ctensor A$ that is sufficies to check this equality on elements of the non-completed tensor product~$A \tensor A \tensor A$.
+    There is holds by assumption.
+  }
 \end{remark}
 
 \begin{definition}
@@ -3237,8 +3359,6 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
   \begin{enumerate}
     \item
       A \defemph{(formal) deformation} of~$A$ is a topological Hopf algebra~$A_{\hbar}$ whose underlying~\module{$\kfhbar$} is~$\power{A}{\hbar}$ and for which~$A_\hbar / \hbar A_\hbar = A$ as Hopf algebras.
-    \item
-      (Formal) deformations of coalgebras and bialgebras are defined in the way as for algebras and Hopf algebras.
     \item
       Two Hopf algebra deformations~$A_\hbar$ and~$A'_\hbar$ of~$A$ are \defemph{equivalent} if there exists an isomorphism of Hopf algebras
       \[
@@ -3257,11 +3377,10 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
         A'_\hbar / \hbar A'_\hbar
         = A
       \]
-      is the identity, i.e.~$\varphi$ is the identity modulo~$\hbar$.
-
-      Equivalence of deformations of coalgebras and bialgebras is defined in the same way.
+      is the identity of~$A$, i.e.~$\varphi$ is the identity of~$A$ modulo~$\hbar$.
     \item
-      A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e.~$\power{A}{\hbar}$).
+      (Formal) deformations of coalgebras and bialgebras are defined in the way as for algebras and Hopf algebras.
+      Equivalence of deformations of coalgebras and bialgebras is defined in the same way.
     \item
       A Hopf algebra deformation of the universal enveloping algebra~$\Univ(\glie)$ of a Lie~algebra~$\glie$ is a \defemph{quantum universal enveloping algebra}.
   \end{enumerate}
@@ -3290,9 +3409,9 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
       S_{\hbar} &\colon \power{A}{\hbar} \to \power{A}{\hbar}
     \end{aligned}
   \end{equation}
-  which are perturbations of the structure maps of~$A$, i.e.\ they reduce modulo~$\hbar$ to the structure maps of~$A$.
+  which are perturbations of the structure maps of~$A$, i.e.\ they reduce modulo~$\hbar$ to the original structure maps of~$A$.
 
-  We can for example characterize the comultiplication~$\Delta_{\hbar}$ of~$A_{\hbar}$ by a sequence of bilinear map
+  We can for example characterize the comultiplication~$\Delta_{\hbar}$ of~$A_{\hbar}$ by a sequence of~\bilinear{$\kf$} maps
   \[
     \Delta_i \colon A \to A \tensor A
   \]
@@ -3303,7 +3422,7 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
     \Delta_0(a) + \Delta_1(a) \hbar + \Delta_2(a) \hbar^2 + \dotsb
   \]
   for every~$a \in A$.
-  Here~$\Delta_0$ needs to be the original comultiplication from~$A$.
+  Here~$\Delta_0$ needs to be the original comultiplication from~$A$, and the coassociativity of~$\Delta_{\hbar}$ gives certain conditions on the bilinear maps~$\Delta_i$.
 \end{remark}
 
 \begin{example}
@@ -3312,14 +3431,16 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
     \item
       Every Hopf algebra~$A$ admits the trivial deformation~$\power{A}{\hbar}$.
       In the form~\eqref{explicit description of deformed hopf algebra} the structure maps of this deformation are given by the~\linear{$\kfhbar$} extensions of the structure maps of~$A$.
+
+      A deformation is \defemph{trivial} if it is equivalent to the trivial deformation (i.e.~$\power{A}{\hbar}$).
     \item
-      One an make the algebra deformation~$\Univ_{\hbar}(\sllie_2)$ of~$\Univ(\sllie_2)$ into a Hopf algebra deformation via the comultiplication
+      One can make the algebra deformation~$\Univ_{\hbar}(\sllie_2)$ of~$\Univ(\sllie_2)$ into a Hopf algebra deformation via the comultiplication
       \[
         \Delta_{\hbar}(H) = H \tensor 1 + 1 \tensor H \,,
         \quad
         \Delta_{\hbar}(E) = E \tensor K + 1 \tensor E \,,
         \quad
-        \Delta_{\hbar}(F) = F \tensor 1 + K^{-1} \tensor F \,
+        \Delta_{\hbar}(F) = F \tensor 1 + K^{-1} \tensor F \,,
       \]
       the counit
       \[
@@ -3346,7 +3467,7 @@ The following is taken mostly from~\cite[Chapter~6]{guide_to_quantum_groups}.
         \quad
         S_{\hbar}(K) = K^{-1} \,.
       \]
-      For the elements~$E$,~$F$,~$K$,~$K^{-1}$ in~$\Univ_{\hbar}(\sllie_2)$ we hence regain the formulas for the Hopf algebra structure of~$\Univ_q(\sllie_2)$.
+      For the elements~$E$,~$K$,~$K^{-1}$,~$F$ in~$\Univ_{\hbar}(\sllie_2)$ we hence regain the formulas for the Hopf algebra structure of~$\Univ_q(\sllie_2)$.
   \end{enumerate}
 \end{example}
 
@@ -3369,7 +3490,7 @@ We lastly give an explanation of how the irreducible, finite-dimensional represe
     \item
       The~\module{$\Univ_{\hbar}(\sllie_2)$}~$V(n)$ reduces modulo~$\hbar$ to the irreducible representations~$\irred(n)$ of~$\Univ(\sllie_2)$.
     \item
-      The actions of~$K$ and~$\widetilde{H}$ on~$V(n)$ is given by
+      The actions of~$K$ and~$\widetilde{H}$ on~$V(n)$ are given by
       \[
         K v_i
         =
@@ -3391,6 +3512,37 @@ We lastly give an explanation of how the irreducible, finite-dimensional represe
   \end{enumerate}
 \end{theorem}
 
+
+\begin{remark}
+  We have so far consider a specific deformation~$\Univ_{\hbar}(\sllie_2)$ of~$\Univ(\sllie_2)$.
+  But the choice of a deformation of~$\Univ(\sllie_2)$ is not canonical, and there are also other deformations one can consider.
+  One such deformation, as explained in~\cite[\S 6.4,~F]{guide_to_quantum_groups}, is given by
+  \begin{gather*}
+    [H, E] = 4 ( 1 - \e^{-2 \hbar E} ) / \hbar \,,
+    \quad
+    [H, F] = -2 F - \hbar H^2 \,,
+    \quad
+    [E, F] = H \,,
+    \\
+    \Delta(E) = E \tensor 1 + 1 \tensor E \,,
+    \quad
+    \Delta(H) = H \tensor 1 + \e^{-2 \hbar E} \tensor H \,,
+    \quad
+    \Delta(F) = F \tensor 1 + \e^{-2 \hbar E} \tensor F \,,
+    \\
+    \varepsilon(E) = 0 \,,
+    \quad
+    \varepsilon(H) = 0 \,,
+    \quad
+    \varepsilon(F) = 0 \,,
+    \\
+    S(E) = -E \,,
+    \quad
+    S(H) = - \e^{2 \hbar E} H \,,
+    \quad
+    S(F) = - \e^{2 \hbar E} F \,.
+  \end{gather*}
+\end{remark}
 
 
 

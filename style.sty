@@ -23,6 +23,9 @@
 \usepackage{amssymb}
 \usepackage{amsthm} % configuration after cleveref was included
 
+% colours
+\usepackage[dvipsnames]{xcolor}
+
 % pictures and diagrams
 \usepackage{tikz-cd}
 \usetikzlibrary{positioning, shapes.geometric, decorations.text}
@@ -35,9 +38,11 @@
 % header
 %\usepackage[automark, autooneside=false]{scrlayer-scrpage}
 
+% hyperlinking
+\usepackage{hyperref}
+
 % referencing
 \usepackage[noabbrev, capitalize]{cleveref}
-
 
 
 
@@ -70,6 +75,19 @@
 % no unplaned surprises with \cite
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
+
+
+
+%%% hyperref
+
+\hypersetup{
+    colorlinks,
+    linkcolor = {MidnightBlue},
+    % alternative for citecolor: RedViolet
+    citecolor = {BrickRed},
+    urlcolor  = {BrickRed}
+}
+
 
 
 %%% lists
@@ -129,8 +147,8 @@
 \newcommand{\coalgebra}[1]{#1\nobreakdash-coalgebra}
 \newcommand{\howmanyth}[1]{#1\nobreakdash-th}
 \newcommand{\linear}[1]{#1\nobreakdash-linear}
-\newcommand{\module}[1]{#1\nobreakdash-module}
-\newcommand{\modules}[1]{#1\nobreakdash-modules}
+\newcommand{\module}[1]{#1\nobreakdash-\hspace{0pt}module}
+\newcommand{\modules}[1]{#1\nobreakdash-\hspace{0pt}modules}
 \newcommand{\PBWbasis}{PBW\nobreakdash-basis}
 \newcommand{\representation}[1]{#1\nobreakdash-\hspace{0pt}representation}
 \newcommand{\representations}[1]{#1\nobreakdash-\hspace{0pt}representations}
@@ -245,6 +263,7 @@
 \newcommand{\class}{\overline}
 \AtBeginDocument{\renewcommand{\closure}{\overline}}
 \newcommand{\induced}{\overline}
+\newcommand{\op}{\mathrm{op}}
 
 % suchthat
 \NewDocumentCommand%
